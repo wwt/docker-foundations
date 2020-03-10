@@ -11,6 +11,8 @@ WORKDIR /app
 
 COPY my_script.py my_script.py
 
+EXPOSE 8080
+
 LABEL maintainer="Your Name <your.email@your_domain.com>"
 
 CMD sh
