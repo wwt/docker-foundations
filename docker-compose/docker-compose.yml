@@ -1,0 +1,31 @@
+version: '3'
+services:
+  web1:
+    build: .
+    environment:
+      FLASK_APP: app.py
+      FLASK_DEBUG: '1'
+    ports:
+      - 5001:5000
+  web2:
+    build: .
+    environment:
+      FLASK_APP: app.py
+      FLASK_DEBUG: '1'
+    ports:
+      - 5002:5000
+  web3:
+    build: .
+    environment:
+      FLASK_APP: app.py
+      FLASK_DEBUG: '1'
+    ports:
+      - 5003:5000
+  db1:
+    image: redis:5.0-alpine
+    ports:
+      - 6001:6379
+  db2:
+    image: redis:5.0-alpine
+    ports:
+      - 6002:6379
