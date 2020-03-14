@@ -2,13 +2,11 @@
 
 Show the Docker version information
 
-`docker --version`
+```bash
+docker image ls
+```
 
 
-
-Display Docker system-wide information
-
-`docker info`
 
 
 
