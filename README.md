@@ -19,25 +19,48 @@ This repo is heavy in Docker hands-on so that the *result* of your learning will
 To use this repo:
 
 1. Download the repo files in one of two ways
+
    - Use Git to clone the repo to your computer
-     - HTTP - `git clone`
-     - SSH - `git clone `
-   - If you don't know how to use Git, you can download these files:
-     - file1
-     - file2
-     - file3
-2. Open the PowerPoint presentation ***docker-foundations.pptx*** and run the slide show
-   - I use animation to help teach the topic in small chunks and much of the presentation will look like a mess if you don't navigate the animation in slide show mode
-   - I include my presenter notes on every slide and, if you have a second monitor, you can click through the slide show and read my script concurrently.
+     - HTTP - `git clone https://github.wwt.com/hullt/docker-foundations.git`
+     - SSH - `git clone git@github.wwt.com:hullt/docker-foundations.git `
+   - If you don't know how to use Git, you can download the repo files at:
+     - https://github.wwt.com/hullt/docker-foundations/archive/master.zip
+
+2. Open the PowerPoint presentation ***docker-foundations.pptx*** and start slide show mode
+
+   - I use animation to help deliver the topics in small chunks and much of the presentation will look like a mess if you don't navigate the animation in slide show mode
+   - The hands-on sections lists all of the Docker commands you need to follow along with each task plus screen recordings which demonstrate each task 
+   - I include my presenter notes on every slide and if you have a second monitor you can click through the slide show and read the script concurrently
+
 3. The repo includes subfolders which contain reference files and scripts for the hands-on portion of the slide show
-   - The ***docker-images*** folder contains:
+
+   - The 
+
+     [***docker-images***]: /docker-images	"docker-images"
+
+      folder contains:
+
      - A complete copy of the Dockerfile you will build (***Dockerfile***)
      - A small Python script that you build into your Docker Image (***my_script.py***)
        - You do NOT need to know ANY Python to use this repo
-   - The ***docker-compose*** folder contains:
+
+   - The 
+
+     [***docker-compose***]: /docker-compose	"docker-compose"
+
+      folder contains:
+
      - A Dockerfile to support the Images you will build with Docker Compose (***Dockerfile***)
      - A Docker Compose YAML file (***docker-compose.yml***)
      - A Python script which runs the web application you will build with Docker Compose (***app.py***)
+
+   - The 
+
+     [***docker-commands**]: /docker-commands	"docker-commands"
+
+      folder contains:
+
+     - Markdown files with all of the Docker commands from the hands-on sections in the presentation
 
 
 
