@@ -46,7 +46,7 @@ Remove your Docker Image with either of these commands
 
 
 
-If you receive an error when you attempt to remove your Docker image, add the *-f* flag to force removal
+If you receive an error when you attempt to remove your Docker image, add the ***-f*** flag to force removal
 
 `docker image rm -f my_image`
 
@@ -69,4 +69,3 @@ Rebuild your Docker Image
 `docker image built -t my_image .`
 
 **Don't forget the trailing dot, to indicate the Dockerfile is with your current working directory**
-
