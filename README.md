@@ -38,7 +38,8 @@ To use this repo:
      - A Docker Compose YAML file (***docker-compose.yml***)
      - A Python script which runs the web application you will build with Docker Compose (***app.py***)
    - The [***docker-commands***](https://github.wwt.com/hullt/docker-foundations/tree/master/docker-commands "docker-commands") folder contains:
-     - Markdown files with all of the Docker commands from the hands-on sections in the presentation
+     - Markdown files with all of the Docker commands fom the PowerPoint presentation, so you can copy and paste the commands to your terminal
+     - A quick reference for common Docker commands and flags
 
 
 
