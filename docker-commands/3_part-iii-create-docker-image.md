@@ -25,7 +25,7 @@ docker build -t my_image .
 docker image build -t my_image .
 ```
 
-**Don't forget the trailing dot, to indicate the Dockerfile is with your current working directory**
+**Don't forget the trailing dot, to indicate the Dockerfile is within your current working directory**
 
 
 
@@ -84,4 +84,4 @@ Rebuild your Docker Image
 docker image build -t my_image .
 ```
 
-**Don't forget the trailing dot, to indicate the Dockerfile is with your current working directory**
+**Don't forget the trailing dot, to indicate the Dockerfile is within your current working directory**
