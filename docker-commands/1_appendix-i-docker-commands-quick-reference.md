@@ -12,7 +12,3 @@ Display Docker system-wide information
 
 
 
-Download the **hello-world** Image from Docker Hub then create and run a Container from the Image
-
-`docker run hello-world`
-
