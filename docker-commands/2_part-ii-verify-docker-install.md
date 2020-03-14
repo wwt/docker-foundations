@@ -2,17 +2,23 @@
 
 Show the Docker version information
 
-`docker --version`
+```bash
+docker --version
+```
 
 
 
 Display Docker system-wide information
 
-`docker info`
+```bash
+docker info
+```
 
 
 
 Download the **hello-world** Image from Docker Hub then create and run a Container from the Image
 
-`docker run hello-world`
+```bash
+docker run hello-world
+```
 

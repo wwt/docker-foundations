@@ -4,21 +4,26 @@
 
 Display a list of your Docker Images
 
-`docker image ls`
+```bash
+docker image ls
+```
 
 
 
 Change the working directory in your terminal application to the directory with your Dockerfile
 
-`cd ~/code`
+```bash
+cd ~/code
+```
 
 
 
 Create a Docker Image from your Dockerfile with either of these commands
 
-`docker built -t my_image .`
-
-`docker image built -t my_image .`
+```bash
+docker build -t my_image .
+docker image build -t my_image .
+```
 
 **Don't forget the trailing dot, to indicate the Dockerfile is with your current working directory**
 
@@ -32,13 +37,18 @@ Create a Docker Image from your Dockerfile with either of these commands
 
 Display a list of your Docker Images
 
-`docker image ls`
+```bash
+docker image ls
+```
 
 
 
 Remove your Docker Image with either of these commands
 
-`docker image rm my_image`
+```bash
+docker image rm my_image
+docker image rm image_id
+```
 
 `docker image rm image_id` 
 
@@ -48,13 +58,17 @@ Remove your Docker Image with either of these commands
 
 If you receive an error when you attempt to remove your Docker image, add the ***-f*** flag to force removal
 
-`docker image rm -f my_image`
+```bash
+docker image rm -f my_image
+```
 
 
 
 Display a list of your Docker Images to confirm removal of your Image
 
-`docker image ls`
+```bash
+docker image ls
+```
 
 
 
@@ -66,6 +80,8 @@ Display a list of your Docker Images to confirm removal of your Image
 
 Rebuild your Docker Image
 
-`docker image built -t my_image .`
+```bash
+docker image build -t my_image .
+```
 
 **Don't forget the trailing dot, to indicate the Dockerfile is with your current working directory**
