@@ -12,7 +12,7 @@ docker container ls -a
 
 
 
-Create a Container from your Docker Image
+Create and start a Container from your Docker Image
 
 ```bash
 docker container run -it --name my_cont my_image
