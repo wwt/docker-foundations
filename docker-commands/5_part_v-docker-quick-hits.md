@@ -193,3 +193,82 @@ docker container ls -a
 
 ### Cleaning Up
 
+Show a summary of Docker storage consumption
+
+```bash
+docker system df
+```
+
+
+
+Show verbose details of Docker storage consumption
+
+```bash
+docker system df -v
+```
+
+
+
+Stop all running Docker Containers
+
+```bash
+docker container stop $(docker container ls -q)
+```
+
+**The <font color="red">*-q*</font> flag indicates <font color="red">*quiet mode*</font> wich limits the output to the Container ID only**
+
+
+
+Remove all ***stopped*** Containers
+
+```bash
+docker container prune
+```
+
+
+
+Remove all ***dangling*** Images
+
+```bash
+docker image prune
+```
+
+
+
+Remove all ***stopped*** Containers
+
+```bash
+docker container prune
+```
+
+
+
+Remove all:
+
+- Dangling Images
+- Stopped Containers
+- Unused Networks
+- Build cache
+
+```bash
+docker system prune
+```
+
+
+
+Remove all of the above ***plus*** all
+
+- Unused Volumes
+
+```bash
+docker system prune --volumes
+```
+
+
+
+Remove all ***dangling*** and ***unused*** Images - those with no associated Containers
+
+```bash
+dockr image prune -a
+```
+
