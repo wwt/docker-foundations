@@ -47,10 +47,10 @@ Remove your Docker Image with either of these commands
 
 ```bash
 docker image rm my_image
-docker image rm #image_id#
+docker image rm <image_id>
 ```
 
-**Replace <font color="red">*#image_id#*</font> with the appropriate Image ID value from the list of your Docker Images**
+**Replace <font color="red">*<image_id>*</font> with the appropriate Image ID value from the list of your Docker Images**
 
 
 
