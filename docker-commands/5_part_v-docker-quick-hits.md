@@ -235,14 +235,6 @@ docker image prune
 
 
 
-Remove all ***stopped*** Containers
-
-```bash
-docker container prune
-```
-
-
-
 Remove all:
 
 - Dangling Images
