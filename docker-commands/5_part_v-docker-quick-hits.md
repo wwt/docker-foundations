@@ -107,7 +107,7 @@ docker exec -it my_cont1 ifconfig eth0
 
 
 
-Show the interface details for ***eth0*** on the Container ***my_cont2** and locate the ***IP address*** (<font color="red">***inet_addr***</font>)
+Show the interface details for ***eth0*** on the Container ***my_cont2*** and locate the ***IP address*** (<font color="red">***inet_addr***</font>)
 
 ```bash
 docker exec -it my_cont2 ifconfig eth0
