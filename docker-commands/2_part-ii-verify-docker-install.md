@@ -1,6 +1,6 @@
 # Part II - Verify Your Docker Installation
 
-Show the Docker version information
+Show Docker version information
 
 ```bash
 docker --version
