@@ -8,7 +8,7 @@ Display a list of your Docker Containers
 docker container ls -a
 ```
 
-**The *-a* flag shows all containers - the default is only *running* containers** 
+**The <font color="red">*-a*</font> flag shows all containers - the default is only <font color="red">*running*</font> containers** 
 
 
 
@@ -64,9 +64,9 @@ ls -l
 
 
 
-Run the Python script in your Container
+Run the Python script in your Container and follow the prompts
 
-```python
+```bash
 python my_script.py
 ```
 

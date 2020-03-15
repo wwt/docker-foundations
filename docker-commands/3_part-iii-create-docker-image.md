@@ -47,16 +47,14 @@ Remove your Docker Image with either of these commands
 
 ```bash
 docker image rm my_image
-docker image rm image_id
+docker image rm #image_id#
 ```
 
-`docker image rm image_id` 
-
-**Replace *image_id* with the value from the output listing your Docker Images**
+**Replace <font color="red">*#image_id#*</font> with the appropriate Image ID value from the list of your Docker Images**
 
 
 
-If you receive an error when you attempt to remove your Docker image, add the ***-f*** flag to force removal
+If you receive an error when you attempt to remove your Docker image, add the <font color="red">***-f***</font> flag to force removal
 
 ```bash
 docker image rm -f my_image
