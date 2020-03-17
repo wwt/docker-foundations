@@ -10,7 +10,7 @@ Here is my disclaimer...I am NOT a Docker pro, expert, guru, or anyone else that
 - How Docker works
 - How to functionally use Docker for your own purposes
 
-This repo is heavy in Docker hands-on so that the *result* of your learning will be your ability to comfortably use Docker and explain or teach it to someone else.  I believe that learning the information in this repo will give you the tools you need to pass the **Cisco DevNet Associate** exam.
+This repo is heavy in Docker hands-on so that the *result* of your learning will be your ability to comfortably use Docker and explain or teach it to someone else.  I believe that learning the information in this repo will give you the information and skills necessary for the **Cisco DevNet Associate** exam.
 
 
 
