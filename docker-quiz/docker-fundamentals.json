@@ -1,0 +1,221 @@
+{
+  "questions": [
+    {
+      "answers": [
+        "YY.MM (two-digit year, two-digit month)",
+        "MM.YY (two-digit month, two-digit year)",
+        "YYYY.MM (four-digit year, two-digit month)",
+        "MM.YYYY (two-digit month, four-digit year)"
+      ],
+      "correct": {
+        "index": 0,
+        "text": "Docker <a target=\"_blank\" href = \"https://docs.docker.com/install/#release-channels\">release channels</a> correspond to the format, dot-separated two-digit year and two-digit month <b>(YY.MM)</b>."
+      },
+      "image": "img/img1.png",
+      "number": 1,
+      "prompt": "Docker Engine version numbers after March of 2017 correspond to a release date.  What is the correct format for Docker version numbers?"
+    },
+    {
+      "answers": [
+        "True",
+        "False"
+      ],
+      "correct": {
+        "index": 1,
+        "text": "Docker Containers offer many <a target=\"_blank\" href = \"https://docs.docker.com/engine/docker-overview/#what-can-i-use-docker-for\">deployment, scale, and cost</a> advantages over virtual machines, especially for distributed and/or micro-service-based applications."
+      },
+      "image": "img/img2.png",
+      "number": 2,
+      "prompt": "Both Docker Containers and Virtual Machines are similar in that they are ideally suited for distributed, micro-services-based applications. True or False?"
+    },
+    {
+      "answers": [
+        "True",
+        "False"
+      ],
+      "correct": {
+        "index": 1,
+        "text": "Docker Containers are <a target=\"_blank\" href = \"https://docs.docker.com/engine/docker-overview/#what-can-i-use-docker-for\">highly portable</a> and, generally, require no refactoring to run in any environment."
+      },
+      "image": "img/img3.png",
+      "number": 3,
+      "prompt": "Docker Containers are generally less portable than virtual machines, requiring refactoring when moving between different cloud providers. True or False?"
+    },
+    {
+      "answers": [
+        "Client",
+        "REST API",
+        "Server"
+      ],
+      "correct": {
+        "index": 0,
+        "text": "The Docker Client <a target=\"_blank\" href = \"https://docs.docker.com/engine/docker-overview/#docker-engine\">provides the CLI</a> which accepts Docker command syntax."
+      },
+      "image": "img/img4.png",
+      "number": 4,
+      "prompt": "The Docker Engine consists of a Server (dockerd), REST API, and Client. Which of these components provides a CLI for Docker commands?"
+    },
+    {
+      "answers": [
+        "True",
+        "False"
+      ],
+      "correct": {
+        "index": 1,
+        "text": "Docker Images are <a target=\"_blank\" href = \"https://docs.docker.com/engine/docker-overview/#docker-objects\">read-only templates</a> with instructions to create Docker Containers."
+      },
+      "image": "img/img5.png",
+      "number": 5,
+      "prompt": "Docker Images are read-write copies of Docker Containers. True or False?"
+    },
+    {
+      "answers": [
+        "CMD",
+        "RUN",
+        "FROM",
+        "ENTRYPOINT"
+      ],
+      "correct": {
+        "index": 2,
+        "text": "Dockerfile format requires the <b><i>FROM</i></b> instruction before any other instructions.  The FROM instruction <a target=\"_blank\" href = \"https://docs.docker.com/engine/reference/builder/#from\">sets the base image</a> for subsequent instructions."
+      },
+      "image": "img/img6.png",
+      "number": 6,
+      "prompt": "A Dockerfile must always start with which instruction?"
+    },
+    {
+      "answers": [
+        "Runs a job to combine Docker Image layers into a distributable Image",
+        "Defines the default command that will run when a Image runs as a Container",
+        "Instructs the Image to immediately create a Container after the Image build is complete",
+        "Runs any command or script available in the image OS during the build of the Image"
+      ],
+      "correct": {
+        "index": 3,
+        "text": "The Dockerfile <b>RUN</b> instruction <a target=\"_blank\" href = \"https://docs.docker.com/engine/reference/builder/#run\">executes commands</a> available from the OS image (mkdir, pip, touch, etc.) as the Docker Image builds."
+      },
+      "image": "img/img7.png",
+      "number": 7,
+      "prompt": "What does the Dockerfile <b><i>RUN</i></b> instruction do?"
+    },
+    {
+      "answers": [
+        "docker image build --name myImage .",
+        "docker image build -t myImage .",
+        "docker build . -t myImage",
+        "docker build image --t myImage"
+      ],
+      "correct": {
+        "index": 1,
+        "text": "The correct <a target=\"_blank\" href = \"https://docs.docker.com/engine/reference/commandline/image_build/\">syntax</a> to build an image is <b>docker image build</b> or <b>docker build</b>, followed by any options flags, followed by the path to the Dockerfile."
+      },
+      "image": "img/img7.png",
+      "number": 8,
+      "prompt": "What is the correct syntax to build a Docker Image using a Dockerfile, assuming the Dockerfile is in the current directory?"
+    },
+    {
+      "answers": [
+        "docker container --state active",
+        "docker list containers",
+        "docker container ls",
+        "docker container ls -a"
+      ],
+      "correct": {
+        "index": 2,
+        "text": "The correct <a target=\"_blank\" href = \"https://docs.docker.com/engine/reference/commandline/container_ls/\">syntax</a> to list only <b>running containers</b> is <b>docker container ls</b>."
+      },
+      "image": "img/img7.png",
+      "number": 9,
+      "prompt": "What is the correct syntax to list all running Docker Containers?"
+    },
+    {
+      "answers": [
+        "True",
+        "False"
+      ],
+      "correct": {
+        "index": 0,
+        "text": "The <b>Publish</b> flag (-p) <a target=\"_blank\" href = \"https://docs.docker.com/engine/reference/commandline/run/#publish-or-expose-port--p---expose\">syntax</a> specifies a colon-separated value pair of the host port followed by the container port (<b>host_port:container_port</b>)."
+      },
+      "image": "img/img7.png",
+      "number": 10,
+      "prompt": "The command <b><i>docker container run -itp 80:5000 web_app</i></b> will tell the Docker host to listen for connections on TCP port 80 and forward those connections to the Docker container on TCP port 5000. True or False?"
+    },
+    {
+      "answers": [
+        "docker container run -it --name container_1 --delete -d image_1",
+        "docker container run -itv $PWD:/root -rm --name container_1 image_1",
+        "docker container run -itd container_1 --name container_1 image _1",
+        "docker container run -dit --name container_1 --rm image_1"
+      ],
+      "correct": {
+        "index": 3,
+        "text": "The <b>--rm</b> flag instructs the <a target=\"_blank\" href = \"https://docs.docker.com/engine/reference/commandline/container_run/#options\">automatic removal</a> of a container when it exits."
+      },
+      "image": "img/img7.png",
+      "number": 11,
+      "prompt": "What is the correct syntax to run a Docker Container that destroys itself when it stops?"
+    },
+    {
+      "answers": [
+        "-v /app:/tmp/code/app",
+        "-v /tmp/code/app:/app",
+        "-v host:/app container:/tmp/code/app",
+        "-v container:/tmp/code/app host:/app"
+      ],
+      "correct": {
+        "index": 0,
+        "text": "The <b>volume</b> flag (-v) <a target=\"_blank\" href = \"https://docs.docker.com/engine/reference/commandline/run/#mount-volume--v---read-only\">syntax</a> specifies a colon-separated value pair of the host directory followed by the container directory (<b>host_directory:container_directory</b>)."
+      },
+      "image": "img/img7.png",
+      "number": 12,
+      "prompt": "What is the correct syntax for the Docker Container volume flag to mount the host directory <b><i>/app</b></i> to the Docker Container directory <b><i>/tmp/code/app</b></i>?"
+    },
+    {
+      "answers": [
+        "docker shell -it web_app_1 ls -la /home",
+        "docker cmd -it web_app_1 ls /home",
+        "docker exec -it web_app_1 ls -l /home",
+        "docker sh -it web_app_1 ls -la /home"
+      ],
+      "correct": {
+        "index": 2,
+        "text": "The <b>docker exec</b> command <a target=\"_blank\" href = \"https://docs.docker.com/engine/reference/commandline/exec/#run-docker-exec-on-a-running-container\">runs commands</a> on a specified container; <b>ls -l /home</b> to list directory contents of the <b>/home</b> directory, in this case."
+      },
+      "image": "img/img7.png",
+      "number": 13,
+      "prompt": "Which Docker terminal command lists the files in the <b><i>/home</b></i> directory of the Docker Container <b><i>web_app_1</b></i>?"
+    },
+    {
+      "answers": [
+        "--net",
+        "--network",
+        "Either --net or --network"
+      ],
+      "correct": {
+        "index": 2,
+        "text": "Both the <b>--net</b> and <b>--network</b> command flags <a target=\"_blank\" href = \"https://docs.docker.com/engine/reference/commandline/container_run/#options\">perform the same function;</a> specify a network for a container to connect to."
+      },
+      "image": "img/img7.png",
+      "number": 14,
+      "prompt": "Which Docker Container run command flag allows you to specify the network a Docker Container connects to?"
+    },
+    {
+      "answers": [
+        "Integration with Kubernetes or another container orchestration platform",
+        "Perform simple orchestration of multiple Docker containers with YAML file instructions",
+        "List the composition of a Docker Image and extract specific layers",
+        "Automate the lifecycle of several Docker Containers with JSON or XML file instructions"
+      ],
+      "correct": {
+        "index": 1,
+        "text": "Docker Compose <a target=\"_blank\" href = \"https://docs.docker.com/compose/\">defines and runs multi-container Docker applications</a> according to <b>YAML</b> file instructions."
+      },
+      "image": "img/img8.png",
+      "number": 15,
+      "prompt": "What is a key function of Docker Compose?"
+    }
+  ],
+  "title": "Docker Fundamentals Quiz",
+  "url": "https://github.wwt.com/pages/hullt/devnet-quizzes/yang-netconf-restconf"
+}
