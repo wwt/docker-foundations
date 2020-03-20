@@ -1,7 +1,7 @@
 url: https://github.wwt.com/pages/hullt/devnet-quizzes/yang-netconf-restconf
 
 // this is the title of the quiz
-# Docker Fundamentals Quiz
+# Docker Foundations Quiz
 
 1) Docker Engine version numbers after March of 2017 correspond to a release date.  What is the correct format for Docker version numbers?
   * YY.MM (two-digit year, two-digit month)
