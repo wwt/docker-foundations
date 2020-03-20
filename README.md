@@ -20,10 +20,10 @@ To use this repo:
 
 1. Download the repo files in one of two ways
    - Use Git to clone the repo to your computer
-     - HTTP - `git clone https://github.wwt.com/hullt/docker-foundations.git`
-     - SSH - `git clone git@github.wwt.com:hullt/docker-foundations.git `
+     - HTTP - `git clone https://github.com/wwt/docker-foundations.git`
+     - SSH - `git clone git@github.com:wwt/docker-foundations.git `
    - If you don't know how to use Git, you can download the repo files at:
-     - https://github.wwt.com/hullt/docker-foundations/archive/master.zip
+     - https://github.com/wwt/docker-foundations/archive/master.zip
 2. Open the PowerPoint presentation ***docker-foundations.pptx*** and start slide show mode
    - I use animation to help deliver the topics in small chunks and much of the presentation will look like a mess if you don't navigate the animation in slide show mode
    - The hands-on sections lists all of the Docker commands you need to follow along with each task plus screen recordings which demonstrate each task 
