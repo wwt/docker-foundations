@@ -29,17 +29,19 @@ To use this repo:
    - The hands-on sections lists all of the Docker commands you need to follow along with each task plus screen recordings which demonstrate each task 
    - I include my presenter notes on every slide and if you have a second monitor you can click through the slide show and read the script concurrently
 3. The repo includes subfolders which contain reference files and scripts for the hands-on portion of the slide show
-   - The [***docker-image***](https://github.wwt.com/hullt/docker-foundations/tree/master/docker-image "docker-image") folder contains:
+   - The [***docker-image***](https://github.com/wwt/docker-foundations/tree/master/docker-image "docker-image") folder contains:
      - A complete copy of the Dockerfile you will build (***Dockerfile***)
      - A small Python script that you build into your Docker Image (***my_script.py***)
        - You do NOT need to know ANY Python to use this repo
-   - The [***docker-compose***](https://github.wwt.com/hullt/docker-foundations/tree/master/docker-compose "docker-compose") folder contains:
+   - The [***docker-compose***](https://github.com/wwt/docker-foundations/tree/master/docker-compose "docker-compose") folder contains:
      - A Dockerfile to support the Images you will build with Docker Compose (***Dockerfile***)
      - A Docker Compose YAML file (***docker-compose.yml***)
      - A Python script which runs the web application you will build with Docker Compose (***app.py***)
-   - The [***docker-commands***](https://github.wwt.com/hullt/docker-foundations/tree/master/docker-commands "docker-commands") folder contains:
+   - The [***docker-commands***](https://github.com/wwt/docker-foundations/tree/master/docker-commands "docker-commands") folder contains:
      - Markdown files with all of the Docker commands fom the PowerPoint presentation, so you can copy and paste the commands to your terminal
      - A quick reference for common Docker commands and flags
+   - The [***docker-quiz***](https://wwt.github.io/docker-foundations/docker-quiz "docker-quiz") folder contains:
+     - A quiz to test your Docker skills
 
 
 
