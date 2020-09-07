@@ -1,6 +1,6 @@
 # Part II - Verify Your Docker Installation
 
-Show Docker version information
+Show Docker version information:
 
 ```bash
 docker --version
@@ -8,7 +8,7 @@ docker --version
 
 
 
-Display Docker system-wide information
+Display Docker system-wide information:
 
 ```bash
 docker info
@@ -16,7 +16,7 @@ docker info
 
 
 
-Download the **hello-world** Image from Docker Hub then create and run a Container from the Image
+Download the **hello-world** Image from Docker Hub then create and run a Container from the Image:
 
 ```bash
 docker run hello-world
