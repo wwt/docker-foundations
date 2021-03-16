@@ -10,7 +10,7 @@ This repo can help you learn Docker basics which will give you a good understand
 - How Docker works.
 - How to functionally use Docker for your own purposes.
 
-This repo is heavy in Docker hands-on so that the *result* of your learning will be your ability to comfortably use Docker and explain or teach it to someone else.  I believe that learning the information in this repo will give you the information and skills necessary for the Docker exam topics in the **Cisco DevNet Associate** exam.
+This repo is heavy in Docker hands-on activities so that the *result* of your learning will be your ability to comfortably use Docker and both explain Docker concepts or teach them to someone else.  I believe that learning the information in this repo will give you the skills necessary for the Docker exam topics in the **Cisco DevNet Associate** exam.
 
 
 
@@ -23,11 +23,11 @@ To use this repo:
      - HTTP - `git clone https://github.com/wwt/docker-foundations.git`
      - SSH - `git clone git@github.com:wwt/docker-foundations.git `
    - If you don't know how to use Git, you can download the repo files at:
-     - https://github.com/wwt/docker-foundations/archive/master.zip
+     - https://github.com/wwt/docker-foundations/archive/main.zip
 2. Open the PowerPoint presentation ***docker-foundations.pptx*** and start slide show mode.
    - I use animation to help deliver the topics in small chunks and much of the presentation will look like a mess if you don't navigate the animation in slide show mode.
    - The hands-on sections lists all of the Docker commands you need to follow along with each task plus screen recordings which demonstrate each task.
-   - I include my presenter notes on every slide and if you have a second monitor you can click through the slide show and read the script concurrently.
+   - I include presenter notes on every slide and if you have a second monitor you can click through the slide show and read the script concurrently.
 3. The repo includes subfolders which contain reference files and scripts for the hands-on portion of the slide show.
    - The [***docker-image***](https://github.com/wwt/docker-foundations/tree/master/docker-image "docker-image") folder contains:
      - A complete copy of the Dockerfile you will build (***Dockerfile***).
@@ -47,7 +47,7 @@ To use this repo:
 
 ## Feedback
 
-I welcome any feedback or changes to the repo!  Please create a Git Pull Request or contact me if you want to make any changes and let me know if you have ANY questions; especially if you get stuck on something.
+I welcome any feedback or changes to the repo.  Please create a Git Pull Request or contact me if you want to make any changes and let me know if you have ANY questions; especially if you get stuck on something.
 
 I wish you success with your Docker learning journey!
 
