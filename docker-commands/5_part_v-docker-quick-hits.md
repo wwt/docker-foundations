@@ -83,18 +83,24 @@ docker inspect network my_net
 Create two new Containers in ***detached*** mode (<font color="red">***-d*** </font>flag) and attach both to the ***my_net*** Network:
 
 ```bash
+# Syntax option #1
 docker container run -itd --net my_net --name my_cont1 my_image
 docker container run -itd --network my_net --name my_cont2 my_image
+
+# Syntax option #2
+docker run -itd --net my_net --name my_cont1 my_image
+docker run -itd --network my_net --name my_cont2 my_image
 ```
 
 **The <font color="red">*--net*</font> and <font color="red">*--network*</font> flags are interchangeable.**
 
 
 
-Display a list of your Docker Containers:
+Display a list of your Docker Containers with either of these commands:
 
 ```bash
 docker container ls -a
+docker ps -a
 ```
 
 
@@ -137,10 +143,11 @@ docker exec -it my_cont2 ping -c 4 my_cont1
 
 ### Docker Compose
 
-Display a list of your Docker Containers:
+Display a list of your Docker Containers with either of these commands:
 
 ```bash
 docker container ls -a
+docker ps -a
 ```
 
 
@@ -153,10 +160,11 @@ docker-compose -d up
 
 
 
-Display a list of your Docker Containers and observe the ***five new*** Docker Containers:
+Display a list of your Docker Containers and observe the ***five new*** Docker Containers with either of these commands:
 
 ```bash
 docker container ls -a
+docker ps -a
 ```
 
 
@@ -209,10 +217,11 @@ docker system df -v
 
 
 
-Stop all running Docker Containers:
+Stop all running Docker Containers with either of these commands:
 
 ```bash
 docker container stop $(docker container ls -q)
+docker stop $(docker container ls -q)
 ```
 
 **The <font color="red">*-q*</font> flag indicates <font color="red">*quiet mode*</font> wich limits the output to the Container ID only.**
