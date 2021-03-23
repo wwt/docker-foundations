@@ -40,8 +40,7 @@ To use this repo:
    - The [***docker-commands***](https://github.com/wwt/docker-foundations/tree/master/docker-commands "docker-commands") folder contains:
      - Markdown files with all of the Docker commands fom the PowerPoint presentation, so you can copy and paste the commands to your terminal.
      - A quick reference for common Docker commands and flags.
-   - The [***docker-quiz***](https://wwt.github.io/docker-foundations/docker-quiz "docker-quiz") folder contains:
-     - A quiz to test your Docker skills.
+4. You can find a quiz to test your Docker skills [here](https://wwt.github.io/DevNet-quizzes/html/docker-fundamentals.html).
 
 
 
