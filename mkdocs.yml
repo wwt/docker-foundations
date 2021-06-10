@@ -1,0 +1,63 @@
+---
+site_name: "Docker Foundations Hands-On Walktrough"
+nav:
+  - Home: index.md
+  - Setup:
+    - Hands-On Environment Setup: sections/section_1.md
+    - Create a New Repository: sections/section_2.md
+  - Getting Started:
+    - Install Remote Development Extensions in VSC: sections/section_3.md
+    - Clone `docker-foundations` Repo: sections/section_4.md
+  - Create a Dockerfile: sections/section_5.md
+  - Create Devcontainer Configuration:
+    - Create .devcontainer file: sections/section_6.md
+    - Relaunch: sections/section_7.md
+
+
+# Repository
+repo_name: "wwt/docker-foundations"
+repo_url: "https://github.com/wwt/docker-foundations"
+edit_uri: ""
+
+
+
+# Configuration
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.tabs
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: img/logo.svg
+  shortcuts:
+    help: 191    # ?
+    next: 78     # n
+    previous: 80 # p
+    search: 83   # s
+
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - admonition
+  - attr_list
+  - pymdownx.tasklist
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.keys
