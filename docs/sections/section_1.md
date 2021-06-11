@@ -1,4 +1,4 @@
-# :keyboard: ​ Visual Studio Code
+# :keyboard: ​ Setup: Visual Studio Code
 
 The prerequisites indicated that you would need to have Visual Studio Code installed on your local machine for these exercises.  Visual Studio Code supports enhanced features via *Extensions* that can be installed from the Extensions Marketplace.
 
@@ -30,5 +30,6 @@ The Extension details will indicate that the extension is installed and enabled 
 
 [![remote dev extension](../images/remote-development-extension.png)](../../images/remote-development-extension.png){target=_blank}
 
+## What's Next
 
-
+Now that you have installed the required Visual Studio Code Extensions from the Marketplace you will create a new GitHub repository, clone that locally and open it in Visual Studio Code. 

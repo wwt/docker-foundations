@@ -1,4 +1,4 @@
-#  Create and Open a New Project
+#  Setup: Create and Open a New Project
 
 This section will guide you through creating a new repository on [GitHub](https://github.com) and opening that new repository in Visual Studio Code. 
 
@@ -80,4 +80,10 @@ There are two ways to approach this step:
         I have a folder named development where all of my development projects are located.
 
 6. *CLICK* **Open** in the dialog prompt to Open the Repository
-    ![image-20210611102053356](../images/vsc-open-cloned-repo.png)
+    <img src="../../images/vsc-open-cloned-repo.png" alt="image-20210611102053356" style="zoom:50%;" />
+
+
+
+## What's Next 
+
+:tomato: Now you are ready to get to the "meat" of the tomato...next you will walk through the basics of building a `Dockerfile`.  

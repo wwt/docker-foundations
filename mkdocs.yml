@@ -6,8 +6,8 @@ nav:
     - Visual Studio Code: sections/section_1.md
     - Start a New Project: sections/section_2.md
   - Define Your Project Development Environment:
-    - Create a Dockerfile: sections/section_5.md
-    - Create Devcontainer Configuration: sections/section_6.md
+    - Create a Dockerfile: sections/section_3.md
+    - Create Devcontainer Configuration: sections/section_4.md
     - Reopen Your Project: sections/section_7.md
   - Going Further:
     - Why?: sections/section_8.md

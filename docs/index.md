@@ -6,7 +6,7 @@
 
 ## Overview
 
-This Hands-On walk-through is designed to provide you real-world exposure to the foundational Docker instructions to build a Docker image and integrate it with Visual Studio Code.  
+This Hands-On walk-through is designed to provide you real-world exposure to the foundational Docker instructions to build a Docker image and integrate it with Visual Studio Code.  The outcome from this lab is both knowledge of Docker and building containers plus the added benefit of learning how to utilize the container as your development environment when using Visual Studio Code.
 
 Here are some additional resources available:
 
@@ -19,3 +19,6 @@ Here are some additional resources available:
 3. Alternatively, you can [install Docker in a Linux Environment](https://docs.docker.com/engine/install/) and complete the walkthrough.
 4. Visual Studio Code ([download](https://code.visualstudio.com/download))
 
+## What's Next 
+
+The next section will guide you through getting your environment prepared for the lab.  
