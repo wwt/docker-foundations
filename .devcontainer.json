@@ -1,3 +1,7 @@
 {
-    "dockerFile": "Dockerfile"
+    "dockerFile": "Dockerfile",
+    "extensions": [
+		"knisterpeter.vscode-github",
+		"github.vscode-pull-request-github"
+	]
 }
