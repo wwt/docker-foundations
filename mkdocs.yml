@@ -3,8 +3,8 @@ site_name: "Docker Foundations Hands-On Walktrough"
 nav:
   - Home: index.md
   - Setup:
-    - Hands-On Environment Setup: sections/section_1.md
-    - Create a New Repository: sections/section_2.md
+    - Visual Studio Code: sections/section_1.md
+    - Create a Project Folder: sections/section_2.md
   - Getting Started:
     - Install Remote Development Extensions in VSC: sections/section_3.md
     - Clone `docker-foundations` Repo: sections/section_4.md
