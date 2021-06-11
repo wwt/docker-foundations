@@ -1,6 +1,8 @@
 # :whale: Docker Foundations Hands-On
 
-"*Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels.*"
+!!! quote 
+    "*Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels.*"
+    *~ wikipedia*
 
 ## Overview
 
@@ -8,7 +10,7 @@ This Hands-On walk-through is designed to provide you real-world exposure to the
 
 Here are some additional resources available:
 
-:computer: [WWT Programmability Foundations Lab — Docker Section](https://www.wwt.com/lab/programmability-foundations-lab " WWT Programmability Foundations - Version Control"){target=_blank}
+:computer: [WWT Programmability Foundations Lab — Docker Section](https://www.wwt.com/lab/programmability-foundations-lab " WWT Programmability Foundations - Version Control")
 
 ## What You Need
 
