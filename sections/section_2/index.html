@@ -14,7 +14,7 @@
     
     
       
-        <title>Start a New Project - Docker Foundations Hands-On Walktrough</title>
+        <title>Setup - Start a New Project - Docker Foundations Hands-On Walktrough</title>
       
     
     
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Start a New Project
+              Setup - Start a New Project
             
           </span>
         </div>
@@ -331,7 +331,7 @@
   
     <li class="md-nav__item">
       <a href="../section_1/" class="md-nav__link">
-        Visual Studio Code
+        Setup - Visual Studio Code
       </a>
     </li>
   
@@ -352,12 +352,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Start a New Project
+          Setup - Start a New Project
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Start a New Project
+        Setup - Start a New Project
       </a>
       
         
@@ -618,31 +618,49 @@
                 
                 <h1 id="setup-create-and-open-a-new-project">Setup: Create and Open a New Project</h1>
 <p>This section will guide you through creating a new repository on <a href="https://github.com">GitHub</a> and opening that new repository in Visual Studio Code. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are multiple approaches to accomplish these same tasks.  This section represents one workflow.</p>
+</div>
 <h2 id="create-a-repo-on-github">Create a Repo on GitHub</h2>
-<p>All of your development projects should start with creating a repository to store you hard work in a safe place.  </p>
+<p>This workflow will start with creating a repository for your project on GitHub.  GitHub provides remote version control system for your local repository and many advanced collaboration capabilities. </p>
+<p>You can learn more about GitHub in the <a href="https://docs.github.com/en/github">GitHub Documentation</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Additional Resources</strong></p>
+<p><a href="https://wwt.github.io/git-foundations/">Git Foundations Walk Through</a></p>
+<p><a href="https://www.wwt.com/lab/programmability-foundations-lab">Version Control Lab</a></p>
+<p><a href="https://www.wwt.com/video/introduction-to-version-control">Version Control Video</a></p>
+</div>
 <ol>
 <li>
-<p>NAVIGATE to <a href="www.github.com">GitHub</a></p>
+<p><em>NAVIGATE</em> to <a href="www.github.com"><strong>GitHub</strong></a></p>
 </li>
 <li>
 <p><em>CLICK</em> the <strong>New</strong>  button next to <strong>Repositories</strong></p>
 </li>
 </ol>
 <p><img alt="image-20210611093355694" src="../../images/github-home.png" /></p>
-<ol>
-<li>
-<p><em>NAME</em> the repo <strong>docker-foundations-lab</strong></p>
-</li>
-<li>
-<p><em>SET</em> the repo to <strong>Private</strong> </p>
-</li>
-</ol>
 <p><img alt="GitHub New Repo" src="../../images/new-github-repo.png" /></p>
 <ol>
-<li><em>CLICK</em> <strong>Add a README file</strong></li>
-<li><em>CLICK</em> <strong>Add .gitignore</strong> and <em>SELECT</em> <strong>Python</strong></li>
-<li><em>CLICK</em> <strong>Choose a license</strong> and <em>SELECT</em> <strong>Apache License 2.0</strong></li>
-<li><em>CLICK</em> <strong>Create Repository</strong></li>
+<li>
+<p><em>NAME</em> the repo <strong>docker-foundations-lab</strong> (#1 in the image above)</p>
+</li>
+<li>
+<p><em>SET</em> the repo to <strong>Private</strong> (#2 in the image above)</p>
+</li>
+<li>
+<p><em>CLICK</em> <strong>Add a README file</strong> (# 3 in the image above)</p>
+</li>
+<li>
+<p><em>CLICK</em> <strong>Add .gitignore</strong> and <em>SELECT</em> <strong>Python</strong> (# 3 in the image above)</p>
+</li>
+<li>
+<p><em>CLICK</em> <strong>Choose a license</strong> and <em>SELECT</em> <strong>Apache License 2.0</strong> (# 3 in the image above)</p>
+</li>
+<li>
+<p><em>CLICK</em> <strong>Create Repository</strong> (# 4 in the image above)</p>
+</li>
 </ol>
 <p><a href="../../images/created-repo.png" target="_blank"><img alt="image-20210611094825116" src="../../images/created-repo.png" /></a></p>
 <p>Now that you have created your new repository on GitHub you can move forward with opening this new project in Visual Studio Code.</p>
@@ -654,9 +672,6 @@
 </ol>
 <h3 id="manually-clone-method">Manually Clone Method</h3>
 <ol>
-<li>
-<p><em>OPEN</em> a new <strong>Terminal</strong></p>
-</li>
 <li>
 <p><em>NAVIGATE</em> to your repo on GitHub</p>
 </li>
@@ -671,6 +686,9 @@
    ​    <a href="../../images/copy-github-clone-string.png" target="_blank"><img alt="copy-github-clone-string" src="../../images/copy-github-clone-string.png" /></a></p>
 </li>
 <li>
+<p><em>OPEN</em> a new <strong>Terminal</strong></p>
+</li>
+<li>
 <p><em>PASTE</em> <code>git clone</code> plus that string into your <strong>Terminal</strong></p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
@@ -681,6 +699,7 @@
 <p class="admonition-title">Important</p>
 <p>The command above will clone down the repository creating a subfolder with the name of the repo in the folder where you ran the command.</p>
 </div>
+<p><img alt="Clone Project Repo" src="../../images/clone-project-repo-manual.gif" /></p>
 </li>
 <li>
 <p><em>OPEN</em> the new Folder in Visual Studio Code using <strong>Open Folder</strong></p>
@@ -710,7 +729,7 @@
 </div>
 </li>
 <li>
-<p><em>CLICK</em> <strong>Open</strong> in the dialog prompt to Open the Repository
+<p><em>CLICK</em> <strong>Open</strong> in the dialog prompt to <strong><em>Open the Repository</em></strong>
     <img src="../../images/vsc-open-cloned-repo.png" alt="image-20210611102053356" style="zoom:50%;" /></p>
 </li>
 </ol>
@@ -743,7 +762,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Visual Studio Code
+              Setup - Visual Studio Code
             </div>
           </div>
         </a>

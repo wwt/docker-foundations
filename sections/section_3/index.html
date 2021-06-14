@@ -329,7 +329,7 @@
   
     <li class="md-nav__item">
       <a href="../section_1/" class="md-nav__link">
-        Visual Studio Code
+        Setup - Visual Studio Code
       </a>
     </li>
   
@@ -341,7 +341,7 @@
   
     <li class="md-nav__item">
       <a href="../section_2/" class="md-nav__link">
-        Start a New Project
+        Setup - Start a New Project
       </a>
     </li>
   
@@ -671,9 +671,9 @@
 <p>Here are some instructions for building a base image if you so desire: <a href="https://docs.docker.com/develop/develop-images/baseimages/">Base Images</a></p>
 </div>
 <h2 id="create-the-initial-dockerfile">Create the Initial Dockerfile</h2>
-<p>Once you have selected the desired base image you can start to build your <code>Dockerfile</code> for the project.</p>
+<p>Once you have selected the desired base image you can start to build your <code>Dockerfile</code> for the project. The first line of a Dockerfile is <em>almost</em> always the <a href="https://docs.docker.com/engine/reference/builder/#from"><code>FROM</code></a> command.  The only other command that can precede  <code>FROM</code> is <code>ARG</code>.  This section keeps it simple and uses only <code>FROM</code></p>
 <ol>
-<li><em>CREATE</em> a <strong>new file</strong> named <strong>Dockerfile</strong> in the root of your project directory</li>
+<li><em>CREATE</em> a <strong>new file</strong> named <strong>Dockerfile</strong> in the <em>root</em> of your project directory</li>
 <li><em>ADD</em> the following first <strong>line</strong></li>
 </ol>
 <p>​    <code>FROM python:slim-buster</code></p>
@@ -685,19 +685,24 @@
 </code></pre></div>
 <h2 id="installing-os-requirements">Installing OS Requirements</h2>
 <p>There will be many occassions where you will need to add some OS level packages that rely on a package manager for installation.  In this case we are on a Debian Linux based system which uses <code>apt</code> as a package manager.  </p>
-<p>In the Dockerfile you can use the <code>RUN</code> command to provide instructions to perform these package installations. </p>
+<p>In the Dockerfile you can use the <a href="https://docs.docker.com/engine/reference/builder/#run"><code>RUN</code></a> command to provide instructions to perform these package installations.  The <code>RUN</code> instruction can be used for executing commands on the target container.  This section will use the <em>shell</em> syntax.  Check the Docker documentation for more information. </p>
 <div class="highlight"><pre><span></span><code><span class="c"># Update Debian Packages and Install Git</span>
 <span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> apt-get -y install git
 </code></pre></div>
 <p>Since this will be our development environment we will need to have <code>git</code> installed in the container. </p>
 <h2 id="create-a-working-directory"><img alt="📂" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c2.svg" title=":open_file_folder:" /> Create a Working Directory</h2>
-<div class="highlight"><pre><span></span><code><span class="c"># Create a Working Directory</span>
-<span class="k">RUN</span> mkdir -p /development
-
-<span class="c"># Set the new directory</span>
+<p>A Working Directory is set to be the source directory for all subsequent <code>RUN</code>, <code>CMD</code>, <code>COPY</code>, and <code>ADD</code> Dockerfile Instructions.  This walk-through will create a <code>/development</code> directory in our container and set it as our <strong>working directory</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If the directory doesn't exist it will be created automatically.</p>
+</div>
+<p><strong>STEP 1.</strong>  <em>APPEND</em> the <code>WORKDIR</code> instruction to the <code>Dockerfile</code></p>
+<div class="highlight"><pre><span></span><code><span class="c"># Set the new directory</span>
 <span class="k">WORKDIR</span><span class="s"> /development</span>
 </code></pre></div>
 <h2 id="copy-files">Copy Files</h2>
+<p>Another common need is to copy files into the container.  When using the container as a development environment, Visual Studio Code will automatically <strong>mount</strong> the project directory and make the files available within the container.  This relates to files you need to have available in the container (aside from your development repo) like the <code>requirements.txt</code> file so we can install packages. </p>
+<p><strong>STEP 1.</strong>  <em>APPEND</em> the <code>COPY</code> instruction to the <code>Dockerfile</code></p>
 <div class="highlight"><pre><span></span><code><span class="c"># Copy requirements.txt into Container</span>
 <span class="k">COPY</span> requirements.txt /development
 </code></pre></div>
@@ -753,7 +758,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Start a New Project
+              Setup - Start a New Project
             </div>
           </div>
         </a>
