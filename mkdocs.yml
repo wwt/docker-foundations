@@ -8,17 +8,13 @@ nav:
   - Define Your Project Development Environment:
     - Create a Dockerfile: sections/section_3.md
     - Create Devcontainer Configuration: sections/section_4.md
-    - Reopen Your Project: sections/section_7.md
-  - Going Further:
-    - Why?: sections/section_8.md
-
+  - Validate the Environment: sections/section_5.md
+  - Closing: sections/section_6.md
 
 # Repository
 repo_name: "wwt/docker-foundations"
 repo_url: "https://github.com/wwt/docker-foundations"
 edit_uri: ""
-
-
 
 # Configuration
 theme:
