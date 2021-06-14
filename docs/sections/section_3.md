@@ -92,6 +92,7 @@ Another common need is to copy files into the container.  When using the contain
    ```text
    pyaml
    requests
+   flake8
    ```
 
 3. *SAVE* the **file**
