@@ -601,27 +601,30 @@
                 
                 
                 <h1 id="setup-create-and-open-a-new-project">Setup: Create and Open a New Project</h1>
-<p>This section will guide you through creating a new repository on <a href="https://github.com">GitHub</a> and opening that new repository in Visual Studio Code. </p>
+<p>This section will guide you through creating a new repository on <a href="https://github.com">GitHub</a> and opening that new repository in Visual Studio Code.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>There are multiple approaches to accomplish these same tasks.  This section represents one workflow.</p>
 </div>
+<p>There are multiple approaches to accomplish these same tasks. This section represents one workflow.</p>
 <h2 id="create-a-repo-on-github">Create a Repo on GitHub</h2>
-<p>This workflow will start with creating a repository for your project on GitHub.  GitHub provides remote version control system for your local repository and many advanced collaboration capabilities. </p>
+<p>This workflow will start with creating a repository for your project on GitHub. GitHub provides remote version control system for your local repository and many advanced collaboration capabilities.</p>
 <p>You can learn more about GitHub in the <a href="https://docs.github.com/en/github">GitHub Documentation</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Additional Resources</strong></p>
-<p><a href="https://wwt.github.io/git-foundations/">Git Foundations Walk Through</a></p>
-<p><a href="https://www.wwt.com/lab/programmability-foundations-lab">Version Control Lab</a></p>
-<p><a href="https://www.wwt.com/video/introduction-to-version-control">Version Control Video</a></p>
 </div>
+<p><strong>Additional Resources</strong></p>
+<div class="highlight"><pre><span></span><code>[Git Foundations Walk Through](https://wwt.github.io/git-foundations/)
+
+[Version Control Lab](https://www.wwt.com/lab/programmability-foundations-lab)
+
+[Version Control Video](https://www.wwt.com/video/introduction-to-version-control)
+</code></pre></div>
 <ol>
 <li>
 <p><em>NAVIGATE</em> to <a href="www.github.com"><strong>GitHub</strong></a></p>
 </li>
 <li>
-<p><em>CLICK</em> the <strong>New</strong>  button next to <strong>Repositories</strong></p>
+<p><em>CLICK</em> the <strong>New</strong> button next to <strong>Repositories</strong></p>
 </li>
 </ol>
 <p><img alt="image-20210611093355694" src="../../images/github-home.png" /></p>
@@ -667,7 +670,7 @@
 </li>
 <li>
 <p><em>CLICK</em> the <strong>Copy</strong> icon
-   ​    <a href="../../images/copy-github-clone-string.png" target="_blank"><img alt="copy-github-clone-string" src="../../images/copy-github-clone-string.png" /></a></p>
+    ​ <a href="../../images/copy-github-clone-string.png" target="_blank"><img alt="copy-github-clone-string" src="../../images/copy-github-clone-string.png" /></a></p>
 </li>
 <li>
 <p><em>OPEN</em> a new <strong>Terminal</strong></p>
@@ -676,13 +679,14 @@
 <p><em>PASTE</em> <code>git clone</code> plus that string into your <strong>Terminal</strong></p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p><strong>SSH</strong> <code>git clone git@github.com:jandiorio/docker-foundations-lab.git</code></p>
-<p><strong>HTTPS</strong> <code>git clone https://github.com/jandiorio/docker-foundations-lab.git</code></p>
 </div>
+<p><strong>SSH</strong> <code>git clone git@github.com:jandiorio/docker-foundations-lab.git</code></p>
+<div class="highlight"><pre><span></span><code>**HTTPS** `git clone https://github.com/jandiorio/docker-foundations-lab.git`
+</code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>The command above will clone down the repository creating a subfolder with the name of the repo in the folder where you ran the command.</p>
 </div>
+<p>The command above will clone down the repository creating a subfolder with the name of the repo in the folder where you ran the command.</p>
 <p><img alt="Clone Project Repo" src="../../images/clone-project-repo-manual.gif" /></p>
 </li>
 <li>
@@ -699,26 +703,24 @@
 </li>
 <li>
 <p><em>CLICK</em> <strong>Clone Repository</strong></p>
-<p><img alt="VSC Repo Clone" src="../../images/vsc-clone-repo.png" /></p>
-</li>
-<li>
-<p>PASTE repository string</p>
-<p><img alt="VSC Paste Repo" src="../../images/vsc-paste-repo-string.png" /></p>
-</li>
-<li>
-<p><em>SELECT</em> the <strong>parent directory</strong> </p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>I have a folder named development where all of my development projects are located.</p>
-</div>
-</li>
-<li>
-<p><em>CLICK</em> <strong>Open</strong> in the dialog prompt to <strong><em>Open the Repository</em></strong>
-    <img src="../../images/vsc-open-cloned-repo.png" alt="image-20210611102053356" style="zoom:50%;" /></p>
 </li>
 </ol>
+<p><img alt="VSC Repo Clone" src="../../images/vsc-clone-repo.png" /></p>
+<ol>
+<li>PASTE repository string</li>
+</ol>
+<p><img alt="VSC Paste Repo" src="../../images/vsc-paste-repo-string.png" /></p>
+<ol>
+<li><em>SELECT</em> the <strong>parent directory</strong></li>
+</ol>
+<p>!!! tip
+   I have a folder named development where all of my development projects are located.</p>
+<ol>
+<li><em>CLICK</em> <strong>Open</strong> in the dialog prompt to <strong><em>Open the Repository</em></strong>
+   <img src="../../images/vsc-open-cloned-repo.png" alt="image-20210611102053356" style="zoom:50%;" /></li>
+</ol>
 <h2 id="whats-next">What's Next</h2>
-<p><img alt="🍅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f345.svg" title=":tomato:" /> Now you are ready to get to the "meat" of the tomato...next you will walk through the basics of building a <code>Dockerfile</code>.  </p>
+<p><img alt="🍅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f345.svg" title=":tomato:" /> Now you are ready to get to the “meat” of the tomato...next you will walk through the basics of building a <code>Dockerfile</code>.</p>
                 
               
               
