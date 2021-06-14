@@ -30,9 +30,9 @@ Feel free to review the available images and read the supporting documentation a
 
 ## Create the Initial Dockerfile
 
-Once you have selected the desired base image you can start to build your `Dockerfile` for the project.
+Once you have selected the desired base image you can start to build your `Dockerfile` for the project. The first line of a Dockerfile is *almost* always the [`FROM`](https://docs.docker.com/engine/reference/builder/#from) command.  The only other command that can precede  `FROM` is `ARG`.  This section keeps it simple and uses only `FROM`
 
-1. *CREATE* a **new file** named **Dockerfile** in the root of your project directory
+1. *CREATE* a **new file** named **Dockerfile** in the *root* of your project directory
 2. *ADD* the following first **line**
 
 ​    `FROM python:slim-buster`
@@ -52,7 +52,7 @@ LABEL author="Jeff Andiorio" email="jeff.andiorio@wwt.com"
 
 There will be many occassions where you will need to add some OS level packages that rely on a package manager for installation.  In this case we are on a Debian Linux based system which uses `apt` as a package manager.  
 
-In the Dockerfile you can use the `RUN` command to provide instructions to perform these package installations. 
+In the Dockerfile you can use the [`RUN`](https://docs.docker.com/engine/reference/builder/#run) command to provide instructions to perform these package installations.  The `RUN` instruction can be used for executing commands on the target container.  This section will use the *shell* syntax.  Check the Docker documentation for more information. 
 
 ```dockerfile
 # Update Debian Packages and Install Git
@@ -63,15 +63,23 @@ Since this will be our development environment we will need to have `git` instal
 
 ## :open_file_folder: Create a Working Directory
 
-```dockerfile
-# Create a Working Directory
-RUN mkdir -p /development
+A Working Directory is set to be the source directory for all subsequent `RUN`, `CMD`, `COPY`, and `ADD` Dockerfile Instructions.  This walk-through will create a `/development` directory in our container and set it as our **working directory**
 
+!!! tip
+    If the directory doesn't exist it will be created automatically.
+
+**STEP 1.**  *APPEND* the `WORKDIR` instruction to the `Dockerfile`
+
+```dockerfile
 # Set the new directory
 WORKDIR /development
 ```
 
 ## Copy Files
+
+Another common need is to copy files into the container.  When using the container as a development environment, Visual Studio Code will automatically **mount** the project directory and make the files available within the container.  This relates to files you need to have available in the container (aside from your development repo) like the `requirements.txt` file so we can install packages. 
+
+**STEP 1.**  *APPEND* the `COPY` instruction to the `Dockerfile`
 
 ```dockerfile
 # Copy requirements.txt into Container
@@ -112,5 +120,4 @@ COPY requirements.txt /development
 RUN pip install -r requirements.txt
 
 ```
-
 
