@@ -1,6 +1,6 @@
 # :whale: Docker Foundations Hands-On
 
-!!! quote 
+!!! quote
     "*Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels.*"
     *~ wikipedia*
 
@@ -19,7 +19,7 @@ Here are some additional resources available:
 3. Alternatively, you can [install Docker in a Linux Environment](https://docs.docker.com/engine/install/) and complete the walkthrough.
 4. Visual Studio Code ([download](https://code.visualstudio.com/download))
 
-## What's Next 
+## What's Next
 
-The next section will guide you through getting your environment prepared for the lab.  
+The next section will guide you through getting your environment prepared for the lab.
 

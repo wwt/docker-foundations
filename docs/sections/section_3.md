@@ -2,7 +2,7 @@
 
 This section will guide you through building a `Dockerfile` that will be used as part of the integration with Visual Studio Code.
 
-**Scenario:** *Imagine you want to start a new Python-based development project and need to get your development environment setup and ready.*  
+**Scenario:** *Imagine you want to start a new Python-based development project and need to get your development environment setup and ready.*
 
 !!! quote
     A `Dockerfile` is a text document that contains all the commands a user could call on the command line to assemble an image. Using `docker build` users can create an automated build that executes several command-line instructions in succession.
@@ -54,16 +54,16 @@ LABEL author="Jeff Andiorio" email="jeff.andiorio@wwt.com"
 
 ## Installing OS Requirements
 
-There will be many occassions where you will need to add some OS level packages that rely on a package manager for installation.  In this case we are on a Debian Linux based system which uses `apt` as a package manager.  
+There will be many occassions where you will need to add some OS level packages that rely on a package manager for installation.  In this case we are on a Debian Linux based system which uses `apt` as a package manager.
 
-In the Dockerfile you can use the [`RUN`](https://docs.docker.com/engine/reference/builder/#run) command to provide instructions to perform these package installations.  The `RUN` instruction can be used for executing commands on the target container.  This section will use the *shell* syntax.  Check the Docker documentation for more information. 
+In the Dockerfile you can use the [`RUN`](https://docs.docker.com/engine/reference/builder/#run) command to provide instructions to perform these package installations.  The `RUN` instruction can be used for executing commands on the target container.  This section will use the *shell* syntax.  Check the Docker documentation for more information.
 
 ```dockerfile
 # Update Debian Packages and Install Git
 RUN apt-get update && apt-get -y install git
 ```
 
-Since this will be our development environment we will need to have `git` installed in the container. 
+Since this will be our development environment we will need to have `git` installed in the container.
 
 ## :open_file_folder: Create a Working Directory
 
@@ -81,11 +81,11 @@ WORKDIR /development
 
 ## Copy Files
 
-Another common need is to copy files into the container.  When using the container as a development environment, Visual Studio Code will automatically **mount** the project directory and make the files available within the container.  This relates to files you need to have available in the Docker image (aside from your development repo) like the `requirements.txt` file so we can install packages. 
+Another common need is to copy files into the container.  When using the container as a development environment, Visual Studio Code will automatically **mount** the project directory and make the files available within the container.  This relates to files you need to have available in the Docker image (aside from your development repo) like the `requirements.txt` file so we can install packages.
 
 **Scenario:** *The python project will require a couple of additiona. python packages.  Create a `requirements.txt` file and make sure it's available to your Docker image.*
 
-1.  *CREATE* a **file** named `requirements.txt` in the project root directory
+1. *CREATE* a **file** named `requirements.txt` in the project root directory
 
 2. *ADD* the **text** below to the file
 
@@ -125,7 +125,6 @@ If you have followed all of the instructions, your final Dockerfile will look si
 !!! tip
     The `LABEL` instruction will have your information.
 
-
 ```dockerfile
 FROM python:slim-buster
 
@@ -149,4 +148,3 @@ RUN pip install -r requirements.txt
 ## What's Next
 
 Now that you have the completed `Dockerfile` created and have successfully utilized several of the basic Dockerfile instructions how can you use that file?
-

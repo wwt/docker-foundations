@@ -1,24 +1,23 @@
-#  Setup: Create and Open a New Project
+# Setup: Create and Open a New Project
 
-This section will guide you through creating a new repository on [GitHub](https://github.com) and opening that new repository in Visual Studio Code. 
+This section will guide you through creating a new repository on [GitHub](https://github.com) and opening that new repository in Visual Studio Code.
 
 !!! note
     There are multiple approaches to accomplish these same tasks.  This section represents one workflow.
 
 ## Create a Repo on GitHub
 
-This workflow will start with creating a repository for your project on GitHub.  GitHub provides remote version control system for your local repository and many advanced collaboration capabilities. 
+This workflow will start with creating a repository for your project on GitHub.  GitHub provides remote version control system for your local repository and many advanced collaboration capabilities.
 
 You can learn more about GitHub in the [GitHub Documentation](https://docs.github.com/en/github).
 
 !!! note
     **Additional Resources**
-    
 
     [Git Foundations Walk Through](https://wwt.github.io/git-foundations/)
-    
+
     [Version Control Lab](https://www.wwt.com/lab/programmability-foundations-lab)
-    
+
     [Version Control Video](https://www.wwt.com/video/introduction-to-version-control)
 
 1. *NAVIGATE* to [**GitHub**](www.github.com)
@@ -26,7 +25,6 @@ You can learn more about GitHub in the [GitHub Documentation](https://docs.githu
 2. *CLICK* the **New**  button next to **Repositories**
 
    ![image-20210611093355694](../images/github-home.png)
-
 
    ![GitHub New Repo](../images/new-github-repo.png)
 
@@ -55,17 +53,17 @@ There are two ways to approach this step:
 
 ### Manually Clone Method
 
-2. *NAVIGATE* to your repo on GitHub
+1. *NAVIGATE* to your repo on GitHub
 
-3. *CLICK* the **Code** button
+2. *CLICK* the **Code** button
 
-4. *SELECT* the transport (HTTPS or SSH)
+3. *SELECT* the transport (HTTPS or SSH)
 
-5. *CLICK* the **Copy** icon
+4. *CLICK* the **Copy** icon
    ​	[![copy-github-clone-string](../images/copy-github-clone-string.png)](../../images/copy-github-clone-string.png){target=_blank}
 
-6. *OPEN* a new **Terminal**
-  
+5. *OPEN* a new **Terminal**
+
 6. *PASTE* `git clone` plus that string into your **Terminal**
 
     !!! example
@@ -94,7 +92,7 @@ There are two ways to approach this step:
 
     ![VSC Paste Repo](../images/vsc-paste-repo-string.png)
 
-5. *SELECT* the **parent directory** 
+5. *SELECT* the **parent directory**
 
     !!! tip
         I have a folder named development where all of my development projects are located.
@@ -104,4 +102,4 @@ There are two ways to approach this step:
 
 ## What's Next
 
-:tomato: Now you are ready to get to the "meat" of the tomato...next you will walk through the basics of building a `Dockerfile`.  
+:tomato: Now you are ready to get to the "meat" of the tomato...next you will walk through the basics of building a `Dockerfile`.
