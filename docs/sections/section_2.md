@@ -2,27 +2,45 @@
 
 This section will guide you through creating a new repository on [GitHub](https://github.com) and opening that new repository in Visual Studio Code. 
 
+!!! note
+    There are multiple approaches to accomplish these same tasks.  This section represents one workflow.
+
 ## Create a Repo on GitHub
 
-All of your development projects should start with creating a repository to store you hard work in a safe place.  
+This workflow will start with creating a repository for your project on GitHub.  GitHub provides remote version control system for your local repository and many advanced collaboration capabilities. 
 
-1. NAVIGATE to [GitHub](www.github.com)
+You can learn more about GitHub in the [GitHub Documentation](https://docs.github.com/en/github).
+
+!!! note
+    **Additional Resources**
+    
+
+    [Git Foundations Walk Through](https://wwt.github.io/git-foundations/)
+    
+    [Version Control Lab](https://www.wwt.com/lab/programmability-foundations-lab)
+    
+    [Version Control Video](https://www.wwt.com/video/introduction-to-version-control)
+
+1. *NAVIGATE* to [**GitHub**](www.github.com)
 
 2. *CLICK* the **New**  button next to **Repositories**
 
    ![image-20210611093355694](../images/github-home.png)
 
-3. *NAME* the repo **docker-foundations-lab**
 
-4. *SET* the repo to **Private** 
+   ![GitHub New Repo](../images/new-github-repo.png)
 
+3. *NAME* the repo **docker-foundations-lab** (#1 in the image above)
 
-![GitHub New Repo](../images/new-github-repo.png)
+4. *SET* the repo to **Private** (#2 in the image above)
 
-5. *CLICK* **Add a README file**
-6. *CLICK* **Add .gitignore** and *SELECT* **Python**
-7. *CLICK* **Choose a license** and *SELECT* **Apache License 2.0**
-8. *CLICK* **Create Repository**
+5. *CLICK* **Add a README file** (# 3 in the image above)
+
+6. *CLICK* **Add .gitignore** and *SELECT* **Python** (# 3 in the image above)
+
+7. *CLICK* **Choose a license** and *SELECT* **Apache License 2.0** (# 3 in the image above)
+
+8. *CLICK* **Create Repository** (# 4 in the image above)
 
 [![image-20210611094825116](../images/created-repo.png)](../../images/created-repo.png){target=_blank}
 
@@ -37,8 +55,6 @@ There are two ways to approach this step:
 
 ### Manually Clone Method
 
-1. *OPEN* a new **Terminal**
-
 2. *NAVIGATE* to your repo on GitHub
 
 3. *CLICK* the **Code** button
@@ -48,15 +64,19 @@ There are two ways to approach this step:
 5. *CLICK* the **Copy** icon
    ​	[![copy-github-clone-string](../images/copy-github-clone-string.png)](../../images/copy-github-clone-string.png){target=_blank}
 
-6. *PASTE* `git clone` plus that string into your **Terminal**
+6. *OPEN* a new **Terminal**
   
+6. *PASTE* `git clone` plus that string into your **Terminal**
+
     !!! example
         **SSH** `git clone git@github.com:jandiorio/docker-foundations-lab.git`
-  
+
         **HTTPS** `git clone https://github.com/jandiorio/docker-foundations-lab.git`
 
     !!! important
         The command above will clone down the repository creating a subfolder with the name of the repo in the folder where you ran the command.
+
+    ![Clone Project Repo](../images/clone-project-repo-manual.gif)
 
 7. *OPEN* the new Folder in Visual Studio Code using **Open Folder**
 
@@ -79,11 +99,9 @@ There are two ways to approach this step:
     !!! tip
         I have a folder named development where all of my development projects are located.
 
-6. *CLICK* **Open** in the dialog prompt to Open the Repository
+6. *CLICK* **Open** in the dialog prompt to ***Open the Repository***
     <img src="../../images/vsc-open-cloned-repo.png" alt="image-20210611102053356" style="zoom:50%;" />
 
-
-
-## What's Next 
+## What's Next
 
 :tomato: Now you are ready to get to the "meat" of the tomato...next you will walk through the basics of building a `Dockerfile`.  
