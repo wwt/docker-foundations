@@ -2,6 +2,8 @@
 
 This section will guide you through building a `Dockerfile` that will be used as part of the integration with Visual Studio Code.
 
+**Scenario:** *Imagine you want to start a new Python-based development project and need to get your development environment setup and ready.*  
+
 !!! quote
     A `Dockerfile` is a text document that contains all the commands a user could call on the command line to assemble an image. Using `docker build` users can create an automated build that executes several command-line instructions in succession.
 
@@ -13,6 +15,8 @@ Typically, the image that you will build for your projects will be based on a fo
 
 The best approach is to visit [Docker Hub](https://hub.docker.com) and see what images are available based on the focus on your project.
 
+**Scenario:** *Your project is Python-based so the base image will be one of the available Python images.*
+
 There are very simple filtering and searching capabilities on Docker Hub that make it easy to quickly narrow down the options for your base image.
 
 1. *NAVIGATE* to https://hub.docker.com
@@ -23,7 +27,7 @@ There are very simple filtering and searching capabilities on Docker Hub that ma
 
 ![DockerHub Base Image Search](../images/dockerhub-base-image-search.gif)
 
-Feel free to review the available images and read the supporting documentation about the images.  This example will utilize a Python base image and specifically [`3.9.5-slim-buster`](https://github.com/docker-library/python/blob/4c919b943df198286386e00dff51c9cf4074c18d/3.9/buster/slim/Dockerfile)
+Feel free to review the available images and read the supporting documentation about the images.  This example will utilize a Python base image named **slim-buster**.
 
 !!! info
     Here are some instructions for building a base image if you so desire: [Base Images](https://docs.docker.com/develop/develop-images/baseimages/)
@@ -68,7 +72,7 @@ A Working Directory is set to be the source directory for all subsequent `RUN`, 
 !!! tip
     If the directory doesn't exist it will be created automatically.
 
-**STEP 1.**  *APPEND* the `WORKDIR` instruction to the `Dockerfile`
+1. *APPEND* the `WORKDIR` instruction to the `Dockerfile`
 
 ```dockerfile
 # Set the new directory
@@ -77,25 +81,48 @@ WORKDIR /development
 
 ## Copy Files
 
-Another common need is to copy files into the container.  When using the container as a development environment, Visual Studio Code will automatically **mount** the project directory and make the files available within the container.  This relates to files you need to have available in the container (aside from your development repo) like the `requirements.txt` file so we can install packages. 
+Another common need is to copy files into the container.  When using the container as a development environment, Visual Studio Code will automatically **mount** the project directory and make the files available within the container.  This relates to files you need to have available in the Docker image (aside from your development repo) like the `requirements.txt` file so we can install packages. 
 
-**STEP 1.**  *APPEND* the `COPY` instruction to the `Dockerfile`
+**Scenario:** *The python project will require a couple of additiona. python packages.  Create a `requirements.txt` file and make sure it's available to your Docker image.*
 
-```dockerfile
-# Copy requirements.txt into Container
-COPY requirements.txt /development
-```
+1.  *CREATE* a **file** named `requirements.txt` in the project root directory
 
+2. *ADD* the **text** below to the file
 
+   ```text
+   pyaml
+   requests
+   ```
+
+3. *SAVE* the **file**
+
+4. *APPEND* the `COPY` instruction to the `Dockerfile`
+
+    ```dockerfile
+    # Copy requirements.txt into Container
+    COPY requirements.txt /development
+    ```
 
 ## :snake: Installing Python Requirements
 
-```dockerfile
-# Install Python Requirements
-RUN pip install -r requirements.txt
-```
+**Scenario:** *Just having the requirements.txt file will not install the required packages.  Add the 'RUN' command to the `Dockerfile` to install your python project requirements.*
+
+1. *APPEND* the `RUN` instruction to the `Dockerfile` to **install** the python requirements
+
+    ```dockerfile
+    # Install Python Requirements
+    RUN pip install -r requirements.txt
+    ```
+
+!!! info
+    The 'RUN' command above will look for the `requirements.txt` file in the `WORKDIR` which is where you copied the file.
 
 ## Final File
+
+If you have followed all of the instructions, your final Dockerfile will look similar to this:
+
+!!! tip
+    The `LABEL` instruction will have your information.
 
 
 ```dockerfile
@@ -107,9 +134,6 @@ LABEL author="Jeff Andiorio" email="jeff.andiorio@wwt.com"
 # Update Debian Packages and Install Git
 RUN apt-get update && apt-get -y install git
 
-# Create a Working Directory
-RUN mkdir -p /development
-
 # Set the new directory
 WORKDIR /development
 
@@ -120,4 +144,8 @@ COPY requirements.txt /development
 RUN pip install -r requirements.txt
 
 ```
+
+## What's Next
+
+Now that you have the completed `Dockerfile` created and have successfully utilized several of the basic Dockerfile instructions how can you use that file?
 
