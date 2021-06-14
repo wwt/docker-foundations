@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create-a-devcontainerjson-config-file" class="md-skip">
+        <a href="#integrate-docker-with-visual-studio-code" class="md-skip">
           Skip to content
         </a>
       
@@ -230,15 +230,23 @@
   
 
 
+  <li class="md-tabs__item">
+    <a href="../section_5/" class="md-tabs__link">
+      Validate the Environment
+    </a>
+  </li>
+
+      
+        
   
   
-  
-    <li class="md-tabs__item">
-      <a href="../section_8/" class="md-tabs__link">
-        Going Further
-      </a>
-    </li>
-  
+
+
+  <li class="md-tabs__item">
+    <a href="../section_6/" class="md-tabs__link">
+      Closing
+    </a>
+  </li>
 
       
     </ul>
@@ -402,6 +410,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Create Devcontainer Configuration
@@ -417,6 +427,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -425,8 +437,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#brief-overview-of-vsc-integration" class="md-nav__link">
+    Brief Overview of VSC Integration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-a-devcontainerjson-config-file" class="md-nav__link">
     Create a .devcontainer.json Config File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-extensions" class="md-nav__link">
+    Add Extensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-project-in-container" class="md-nav__link">
+    Open Project in Container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    What's Next
   </a>
   
 </li>
@@ -439,18 +479,6 @@
   
 
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../section_7/" class="md-nav__link">
-        Reopen Your Project
-      </a>
-    </li>
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -464,37 +492,25 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      <label class="md-nav__link" for="__nav_4">
-        Going Further
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Going Further" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Going Further
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../section_8/" class="md-nav__link">
-        Why?
+      <a href="../section_5/" class="md-nav__link">
+        Validate the Environment
       </a>
     </li>
   
 
-          
-        </ul>
-      </nav>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../section_6/" class="md-nav__link">
+        Closing
+      </a>
     </li>
   
 
@@ -515,6 +531,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -523,8 +541,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#brief-overview-of-vsc-integration" class="md-nav__link">
+    Brief Overview of VSC Integration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#create-a-devcontainerjson-config-file" class="md-nav__link">
     Create a .devcontainer.json Config File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-extensions" class="md-nav__link">
+    Add Extensions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-project-in-container" class="md-nav__link">
+    Open Project in Container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    What's Next
   </a>
   
 </li>
@@ -542,9 +588,60 @@
               
                 
                 
-                  <h1>Create Devcontainer Configuration</h1>
-                
-                <h2 id="create-a-devcontainerjson-config-file">Create a <code>.devcontainer.json</code> Config File</h2>
+                <h1 id="integrate-docker-with-visual-studio-code">Integrate Docker with Visual Studio Code</h1>
+<p>Visual Studio Code provides integrations with Docker that make the elements of your development environment (where you write code + where you execute code) complete seemless and highly portable.  </p>
+<p>Justs including the <code>Dockerfile</code> in your repository means anyone collaborating or consuming your code will have an indentical execution environment as where developed the solution. </p>
+<p><strong>Scenario:</strong> Integrate our Docker image into Visual Studio Code wo we can take advantage of the seemless development environment and utilize feature like the Python Debugger and Intergrated terminal. </p>
+<h2 id="brief-overview-of-vsc-integration">Brief Overview of VSC Integration</h2>
+<p>The Visual Studio Code Remote - Container extension is one of the extensions included with the bundle we installed earlier.  This extension allows you to use a container as your fully-integrated development environment, exposing all of the features of Visual Studio Code to you within it. </p>
+<p>There are multiple ways to utilize a container as your development environment within Visual Studio Code but we will look at the most <em>integrated</em> and <em>automated</em> method.</p>
+<p><a href="https://code.visualstudio.com/docs/remote/containers">Developing inside a Container</a></p>
+<h2 id="create-a-devcontainerjson-config-file">Create a <code>.devcontainer.json</code> Config File</h2>
+<p>When Visual Studio Code start it looks for a configuration file named <code>.devcontainer.json</code> located either at the project root or in a subfolder named <code>.devcontainer</code> .  The existence of this file will prompt Visual Studio Code to use the contents of that configuration file to map your development environment to a container.</p>
+<ol>
+<li>
+<p><em>CREATE</em> a <strong>file</strong>  named <code>.devcontainer.json</code> in the root of your project</p>
+</li>
+<li>
+<p><em>ADD</em> <code>json</code> formated key/value for the Dockerfile</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;dockerFile&quot;</span><span class="p">:</span> <span class="s2">&quot;Dockerfile&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="add-extensions">Add Extensions</h2>
+<p>Earlier you added some extensions to Visual Studio Code to support the build of our Dockerfile and integration with Visual Studio Code.  Since your current project is a Python project you will want to add a Python extension to Visual Studio Code, and to the container specifically. </p>
+<ol>
+<li><em>CLICK</em> the <strong>Extensions</strong> <img src="../../images/image-20210610152153324.png" style="zoom:33%;" /> <strong>Icon</strong> on the left</li>
+<li><em>PASTE</em> <code>ms-python.python</code> in the Search box and <em>PRESS</em> <strong>&lt;enter></strong></li>
+<li><em>RIGHT-CLICK</em> the <strong>extension</strong> and select "<strong>Add to <code>`devcontainer.json</code></strong>"</li>
+</ol>
+<p><img src="../../images/add-to-devcontainer.json.png" alt="image-20210614131954531" style="zoom:50%;" /></p>
+<ol>
+<li><em>OPEN</em> the <strong><code>devcontainer.json</code></strong> file and review the change</li>
+</ol>
+<p><img alt="image-20210614132142489" src="../../images/devcontainer.json.png" /></p>
+<h2 id="open-project-in-container">Open Project in Container</h2>
+<p>All of the pieces are now in place.  You will need to reopen your project in the container to have your fully functional Docker container-based development environment activated. </p>
+<ol>
+<li>
+<p><em>CLICK</em> the <img src="../images/remote-connection.png" alt="image-20210614132745015" style="zoom:50%;" /> at the bottom left</p>
+</li>
+<li>
+<p><em>SELECT</em> <strong>Reopen in Container</strong></p>
+</li>
+</ol>
+<p><img alt="Reopen in Container" src="../../images/reopen-in-container.png" /></p>
+<ol>
+<li><em>REVIEW</em>  the environment </li>
+</ol>
+<p><img alt="Opened in Container" src="../../images/vsc-opened-in-container.png" /></p>
+<p><img alt="❗" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2757.svg" title=":exclamation:" /> Notice the bottom left corner shows <strong>Dev Container</strong>.  This is confirmation that you are connected to a <strong>Remote Container</strong> using the devcontainer integration. </p>
+<p><img alt="❗" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2757.svg" title=":exclamation:" /> Notice the <strong>terminal</strong> (Open one if it isn't open already) is inside the container.  (Should show <strong>root@</strong>...)</p>
+<p><img alt="❗" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2757.svg" title=":exclamation:" /> Notice a Python Interpretter has been automatically selected for you.  </p>
+<h2 id="whats-next">What's Next</h2>
+<p>The last thing for you to do is test the environment.  The next and last section will provide a very basic review of the environment.</p>
                 
               
               
@@ -578,13 +675,13 @@
         </a>
       
       
-        <a href="../section_7/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../section_5/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Reopen Your Project
+              Validate the Environment
             </div>
           </div>
           <div class="md-footer__button md-icon">

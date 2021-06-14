@@ -14,7 +14,7 @@
     
     
       
-        <title>Section 5 - Docker Foundations Hands-On Walktrough</title>
+        <title>Validate the Environment - Docker Foundations Hands-On Walktrough</title>
       
     
     
@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#visual-studio-code-development-environment-review" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -87,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Section 5
+              Validate the Environment
             
           </span>
         </div>
@@ -221,17 +226,27 @@
         
   
   
+    
+  
 
 
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Validate the Environment
+    </a>
+  </li>
+
+      
+        
   
   
-  
-    <li class="md-tabs__item">
-      <a href="../section_8/" class="md-tabs__link">
-        Going Further
-      </a>
-    </li>
-  
+
+
+  <li class="md-tabs__item">
+    <a href="../section_6/" class="md-tabs__link">
+      Closing
+    </a>
+  </li>
 
       
     </ul>
@@ -394,18 +409,6 @@
   
 
           
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../section_7/" class="md-nav__link">
-        Reopen Your Project
-      </a>
-    </li>
-  
-
-          
         </ul>
       </nav>
     </li>
@@ -418,38 +421,66 @@
 
   
   
-  
     
-    <li class="md-nav__item md-nav__item--nested">
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        
       
-      <label class="md-nav__link" for="__nav_4">
-        Going Further
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Going Further" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Validate the Environment
           <span class="md-nav__icon md-icon"></span>
-          Going Further
         </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Validate the Environment
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-integration" class="md-nav__link">
+    Python Integration
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
   
   
   
     <li class="md-nav__item">
-      <a href="../section_8/" class="md-nav__link">
-        Why?
+      <a href="../section_6/" class="md-nav__link">
+        Closing
       </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -461,15 +492,103 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-integration" class="md-nav__link">
+    Python Integration
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Section 5</h1>
-                
-                
+                <h1 id="visual-studio-code-development-environment-review">Visual Studio Code Development Environment Review</h1>
+<p>The goal of this walk-through was to expose you to the integrations with simple examples.  The section validates the environment is ready for use. </p>
+<h2 id="python-integration">Python Integration</h2>
+<p>In this section you will create a simple Python script to retreive search results from iTunes.  You are looking to validate the Python functionality within the Visual Studio Code Editor.</p>
+<p><img alt="😟" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f61f.svg" title=":worried:" /> Don't worry, you don't have to know any python at this point...</p>
+<ol>
+<li><em>CREATE</em> a <strong>file</strong> named <code>search_itunes.py</code></li>
+<li>
+<p><em>PASTE</em> the Python code below</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c1"># CONSTANTS</span>
+<span class="n">BASE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://itunes.apple.com/search?country=US&quot;</span>
+<span class="n">MEDIA</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;movie&#39;</span><span class="p">,</span> <span class="s1">&#39;music&#39;</span><span class="p">,</span> <span class="s1">&#39;podcast&#39;</span><span class="p">]</span>
+
+<span class="c1"># INPUT VARIABLES</span>
+<span class="n">media</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What type of media? [movie, music, or podcast]:  &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="c1"># VALIDATE INPUT</span>
+<span class="k">if</span> <span class="n">media</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">MEDIA</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Please type one of the valid options [</span><span class="si">{MEDIA}</span><span class="s2">]&quot;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+
+<span class="n">term</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter search string:  &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="c1"># INTERNAL VARIABLES</span>
+<span class="n">_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">&amp;media=</span><span class="si">{</span><span class="n">media</span><span class="si">}</span><span class="s2">&amp;term=</span><span class="si">{</span><span class="n">term</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">_session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">session</span><span class="p">()</span>
+
+<span class="c1"># MAKE REST API CALL</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">_session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">_url</span><span class="p">)</span>
+
+<span class="c1"># EXTRACT RESULT DATA FROM RESONSE OBJECT</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;results&#39;</span><span class="p">]</span>
+
+<span class="c1"># LOOP OVER RESULTS AND PRINT</span>
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;trackName&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;50</span><span class="si">}{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;releaseDate&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">&gt;50</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p><em>SAVE</em> the <strong>file</strong></p>
+</li>
+<li>
+<p><em>CLICK</em> the green play button</p>
+</li>
+</ol>
+<p><img alt="Run Python" src="../../images/run-python.png" /></p>
+<ol>
+<li>
+<p><em>ANSWER</em> the prompts</p>
+</li>
+<li>
+<p><em>REVIEW</em> the results</p>
+</li>
+</ol>
+<p>The presence of the <strong>green</strong> play button indicates the Python extension is working.  </p>
+<p>You can also see the Python Debugger on the left, the 4th icon down. </p>
                 
               
               
@@ -485,6 +604,39 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../section_4/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Create Devcontainer Configuration
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../section_6/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Closing
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
