@@ -649,13 +649,13 @@
 <p><strong>Scenario:</strong> <em>Imagine you want to start a new Python-based development project and need to get your development environment setup and ready.</em></p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
-</div>
 <p>A <code>Dockerfile</code> is a text document that contains all the commands a user could call on the command line to assemble an image. Using <code>docker build</code> users can create an automated build that executes several command-line instructions in succession.</p>
-<p>A Dockerfile defines how an image is built. Once built, the Docker image is the blueprint that will be used to instantiate an ephemeral instance called a container.</p>
+</div>
+<p>A Dockerfile defines how an image is built.  Once built, the Docker image is is the blueprint that will be used to instantiate an ephemeral instance called a container.</p>
 <h2 id="selecting-a-base-image"><img alt="💿" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4bf.svg" title=":cd:" /> Selecting a Base Image</h2>
-<p>Typically, the image that you will build for your projects will be based on a foundational image someone else created. There are a significant number of existing images that you can use as the base of your image.</p>
+<p>Typically, the image that you will build for your projects will be based on a foundational image someone else created.  There are a significant number of existing images that you can use as the base of your image.</p>
 <p>The best approach is to visit <a href="https://hub.docker.com">Docker Hub</a> and see what images are available based on the focus on your project.</p>
-<p><strong>Scenario:</strong> <em>Your project is Python-based, so the base image will be one of the available Python images.</em></p>
+<p><strong>Scenario:</strong> <em>Your project is Python-based so the base image will be one of the available Python images.</em></p>
 <p>There are very simple filtering and searching capabilities on Docker Hub that make it easy to quickly narrow down the options for your base image.</p>
 <ol>
 <li><em>NAVIGATE</em> to https://hub.docker.com</li>
@@ -665,37 +665,37 @@
 <li><em>CLICK</em> <strong>Python</strong></li>
 </ol>
 <p><img alt="DockerHub Base Image Search" src="../../images/dockerhub-base-image-search.gif" /></p>
-<p>Feel free to review the available images and read the supporting documentation about the images. This example will utilize a Python base image named <strong>slim-buster</strong>.</p>
+<p>Feel free to review the available images and read the supporting documentation about the images.  This example will utilize a Python base image named <strong>slim-buster</strong>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-</div>
 <p>Here are some instructions for building a base image if you so desire: <a href="https://docs.docker.com/develop/develop-images/baseimages/">Base Images</a></p>
+</div>
 <h2 id="create-the-initial-dockerfile">Create the Initial Dockerfile</h2>
-<p>Once you have selected the desired base image you can start to build your <code>Dockerfile</code> for the project. The first line of a Dockerfile is <em>almost</em> always the <a href="https://docs.docker.com/engine/reference/builder/#from"><code>FROM</code></a> command. The only other command that can precede <code>FROM</code> is <code>ARG</code>. This section keeps it simple and uses only <code>FROM</code></p>
+<p>Once you have selected the desired base image you can start to build your <code>Dockerfile</code> for the project. The first line of a Dockerfile is <em>almost</em> always the <a href="https://docs.docker.com/engine/reference/builder/#from"><code>FROM</code></a> command.  The only other command that can precede  <code>FROM</code> is <code>ARG</code>.  This section keeps it simple and uses only <code>FROM</code></p>
 <ol>
 <li><em>CREATE</em> a <strong>new file</strong> named <strong>Dockerfile</strong> in the <em>root</em> of your project directory</li>
 <li><em>ADD</em> the following first <strong>line</strong></li>
 </ol>
-<p>​ <code>FROM python:slim-buster</code></p>
+<p>​    <code>FROM python:slim-buster</code></p>
 <p><img alt="Create Dockerfile" src="../../images/dockerfile-from.gif" /></p>
 <h2 id="providing-meta-data">Providing Meta Data</h2>
-<p>Using the <a href="https://docs.docker.com/engine/reference/builder/#label" target="_blank"><code>LABEL</code></a> command we can include some information about the Dockerfile to increase supportability down the road. The <code>LABEL</code> command allows you to define a series of <strong>key</strong> and <strong>value</strong> pairs of attributes.</p>
+<p>Using the <a href="https://docs.docker.com/engine/reference/builder/#label" target="_blank"><code>LABEL</code></a> command we can include some information about the Dockerfile to increase supportability down the road.  The <code>LABEL</code> command allows you to define a series of <strong>key</strong> and <strong>value</strong> pairs of attributes.</p>
 <div class="highlight"><pre><span></span><code><span class="c"># Define some meta data</span>
 <span class="k">LABEL</span> <span class="nv">author</span><span class="o">=</span><span class="s2">&quot;Jeff Andiorio&quot;</span> <span class="nv">email</span><span class="o">=</span><span class="s2">&quot;jeff.andiorio@wwt.com&quot;</span>
 </code></pre></div>
 <h2 id="installing-os-requirements">Installing OS Requirements</h2>
-<p>There will be many occasions where you will need to add some OS level packages that rely on a package manager for installation. In this case we are on a Debian Linux based system which uses <code>apt</code> as a package manager.</p>
-<p>In the Dockerfile you can use the <a href="https://docs.docker.com/engine/reference/builder/#run"><code>RUN</code></a> command to provide instructions to perform these package installations. The <code>RUN</code> instruction can be used for executing commands on the target container. This section will use the <em>shell</em> syntax. Check the Docker documentation for more information.</p>
+<p>There will be many occassions where you will need to add some OS level packages that rely on a package manager for installation.  In this case we are on a Debian Linux based system which uses <code>apt</code> as a package manager.</p>
+<p>In the Dockerfile you can use the <a href="https://docs.docker.com/engine/reference/builder/#run"><code>RUN</code></a> command to provide instructions to perform these package installations.  The <code>RUN</code> instruction can be used for executing commands on the target container.  This section will use the <em>shell</em> syntax.  Check the Docker documentation for more information.</p>
 <div class="highlight"><pre><span></span><code><span class="c"># Update Debian Packages and Install Git</span>
 <span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> apt-get -y install git
 </code></pre></div>
 <p>Since this will be our development environment we will need to have <code>git</code> installed in the container.</p>
 <h2 id="create-a-working-directory"><img alt="📂" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c2.svg" title=":open_file_folder:" /> Create a Working Directory</h2>
-<p>A Working Directory is set to be the source directory for all subsequent <code>RUN</code>, <code>CMD</code>, <code>COPY</code>, and <code>ADD</code> Dockerfile Instructions. This walk-through will create a <code>/development</code> directory in our container and set it as our <strong>working directory</strong></p>
+<p>A Working Directory is set to be the source directory for all subsequent <code>RUN</code>, <code>CMD</code>, <code>COPY</code>, and <code>ADD</code> Dockerfile Instructions.  This walk-through will create a <code>/development</code> directory in our container and set it as our <strong>working directory</strong></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-</div>
 <p>If the directory doesn't exist it will be created automatically.</p>
+</div>
 <ol>
 <li><em>APPEND</em> the <code>WORKDIR</code> instruction to the <code>Dockerfile</code></li>
 </ol>
@@ -703,19 +703,21 @@
 <span class="k">WORKDIR</span><span class="s"> /development</span>
 </code></pre></div>
 <h2 id="copy-files">Copy Files</h2>
-<p>Another common need is to copy files into the container. When using the container as a development environment, Visual Studio Code will automatically <strong>mount</strong> the project directory and make the files available within the container. This relates to files you need to have available in the Docker image (aside from your development repo) like the <code>requirements.txt</code> file, so we can install packages.</p>
-<p><strong>Scenario:</strong> <em>The python project will require a couple of additional python packages. Create a <code>requirements.txt</code> file and make sure it's available to your Docker image.</em></p>
+<p>Another common need is to copy files into the container.  When using the container as a development environment, Visual Studio Code will automatically <strong>mount</strong> the project directory and make the files available within the container.  This relates to files you need to have available in the Docker image (aside from your development repo) like the <code>requirements.txt</code> file so we can install packages.</p>
+<p><strong>Scenario:</strong> <em>The python project will require a couple of additiona. python packages.  Create a <code>requirements.txt</code> file and make sure it's available to your Docker image.</em></p>
 <ol>
 <li>
 <p><em>CREATE</em> a <strong>file</strong> named <code>requirements.txt</code> in the project root directory</p>
 </li>
 <li>
 <p><em>ADD</em> the <strong>text</strong> below to the file</p>
+</li>
+</ol>
 <div class="highlight"><pre><span></span><code>pyaml
 requests
 flake8
 </code></pre></div>
-</li>
+<ol>
 <li>
 <p><em>SAVE</em> the <strong>file</strong></p>
 </li>
@@ -727,23 +729,25 @@ flake8
 </li>
 </ol>
 <h2 id="installing-python-requirements"><img alt="🐍" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f40d.svg" title=":snake:" /> Installing Python Requirements</h2>
-<p><strong>Scenario:</strong> <em>Just having the requirements.txt file will not install the required packages. Add the 'RUN' command to the <code>Dockerfile</code> to install your python project requirements.</em></p>
+<p><strong>Scenario:</strong> <em>Just having the requirements.txt file will not install the required packages.  Add the 'RUN' command to the <code>Dockerfile</code> to install your python project requirements.</em></p>
 <ol>
-<li><em>APPEND</em> the <code>RUN</code> instruction to the <code>Dockerfile</code> to <strong>install</strong> the python requirements</li>
-</ol>
+<li>
+<p><em>APPEND</em> the <code>RUN</code> instruction to the <code>Dockerfile</code> to <strong>install</strong> the python requirements</p>
 <div class="highlight"><pre><span></span><code><span class="c"># Install Python Requirements</span>
 <span class="k">RUN</span> pip install -r requirements.txt
 </code></pre></div>
+</li>
+</ol>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-</div>
 <p>The 'RUN' command above will look for the <code>requirements.txt</code> file in the <code>WORKDIR</code> which is where you copied the file.</p>
+</div>
 <h2 id="final-file">Final File</h2>
-<p>If you have followed all the instructions, your final Dockerfile will look similar to this:</p>
+<p>If you have followed all of the instructions, your final Dockerfile will look similar to this:</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-</div>
 <p>The <code>LABEL</code> instruction will have your information.</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="k">FROM</span> <span class="s">python:slim-buster</span>
 
 <span class="c"># Define some meta data</span>
