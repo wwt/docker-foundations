@@ -3,8 +3,8 @@ site_name: "Docker Foundations Hands-On Walktrough"
 nav:
   - Home: index.md
   - Setup:
-    - Visual Studio Code: sections/section_1.md
-    - Start a New Project: sections/section_2.md
+    - Setup - Visual Studio Code: sections/section_1.md
+    - Setup - Start a New Project: sections/section_2.md
   - Define Your Project Development Environment:
     - Create a Dockerfile: sections/section_3.md
     - Create Devcontainer Configuration: sections/section_4.md
