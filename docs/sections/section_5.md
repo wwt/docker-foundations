@@ -4,7 +4,7 @@ The goal of this walk-through was to expose you to the integrations with simple 
 
 ## Python Integration
 
-In this section you will create a simple Python script to retreive search results from iTunes.  You are looking to validate the Python functionality within the Visual Studio Code Editor.
+In this section you will create a simple Python script to retrieve search results from iTunes.  You are looking to validate the Python functionality within the Visual Studio Code Editor.
 
 :worried: Don't worry, you don't have to know any python at this point...
 

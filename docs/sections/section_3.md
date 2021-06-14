@@ -7,7 +7,7 @@ This section will guide you through building a `Dockerfile` that will be used as
 !!! quote
     A `Dockerfile` is a text document that contains all the commands a user could call on the command line to assemble an image. Using `docker build` users can create an automated build that executes several command-line instructions in succession.
 
-A Dockerfile defines how an image is built.  Once built, the Docker image is is the blueprint that will be used to instantiate an ephemeral instance called a container.
+A Dockerfile defines how an image is built.  Once built, the Docker image is the blueprint that will be used to instantiate an ephemeral instance called a container.
 
 ## :cd: Selecting a Base Image
 
@@ -15,7 +15,7 @@ Typically, the image that you will build for your projects will be based on a fo
 
 The best approach is to visit [Docker Hub](https://hub.docker.com) and see what images are available based on the focus on your project.
 
-**Scenario:** *Your project is Python-based so the base image will be one of the available Python images.*
+**Scenario:** *Your project is Python-based, so the base image will be one of the available Python images.*
 
 There are very simple filtering and searching capabilities on Docker Hub that make it easy to quickly narrow down the options for your base image.
 
@@ -54,7 +54,7 @@ LABEL author="Jeff Andiorio" email="jeff.andiorio@wwt.com"
 
 ## Installing OS Requirements
 
-There will be many occassions where you will need to add some OS level packages that rely on a package manager for installation.  In this case we are on a Debian Linux based system which uses `apt` as a package manager.
+There will be many occasions where you will need to add some OS level packages that rely on a package manager for installation.  In this case we are on a Debian Linux based system which uses `apt` as a package manager.
 
 In the Dockerfile you can use the [`RUN`](https://docs.docker.com/engine/reference/builder/#run) command to provide instructions to perform these package installations.  The `RUN` instruction can be used for executing commands on the target container.  This section will use the *shell* syntax.  Check the Docker documentation for more information.
 
@@ -81,9 +81,9 @@ WORKDIR /development
 
 ## Copy Files
 
-Another common need is to copy files into the container.  When using the container as a development environment, Visual Studio Code will automatically **mount** the project directory and make the files available within the container.  This relates to files you need to have available in the Docker image (aside from your development repo) like the `requirements.txt` file so we can install packages.
+Another common need is to copy files into the container.  When using the container as a development environment, Visual Studio Code will automatically **mount** the project directory and make the files available within the container.  This relates to files you need to have available in the Docker image (aside from your development repo) like the `requirements.txt` file, so we can install packages.
 
-**Scenario:** *The python project will require a couple of additiona. python packages.  Create a `requirements.txt` file and make sure it's available to your Docker image.*
+**Scenario:** *The python project will require a couple of additional python packages.  Create a `requirements.txt` file and make sure it's available to your Docker image.*
 
 1. *CREATE* a **file** named `requirements.txt` in the project root directory
 
@@ -120,7 +120,7 @@ Another common need is to copy files into the container.  When using the contain
 
 ## Final File
 
-If you have followed all of the instructions, your final Dockerfile will look similar to this:
+If you have followed all the instructions, your final Dockerfile will look similar to this:
 
 !!! tip
     The `LABEL` instruction will have your information.
