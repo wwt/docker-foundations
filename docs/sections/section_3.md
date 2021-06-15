@@ -13,39 +13,39 @@ A Dockerfile defines how an image is built.  Once built, the Docker image is the
 
 Typically, the image that you will build for your projects will be based on a foundational image someone else created.  There are a significant number of existing images that you can use as the base of your image.
 
-The best approach is to visit [Docker Hub](https://hub.docker.com) and see what images are available based on the focus on your project.
+The best approach is to visit [Docker Hub](https://hub.docker.com "Docker Hub"){target=_blank} and see what images are available based on the focus on your project.
 
 **Scenario:** *Your project is Python-based, so the base image will be one of the available Python images.*
 
 There are very simple filtering and searching capabilities on Docker Hub that make it easy to quickly narrow down the options for your base image.
 
-1. *NAVIGATE* to https://hub.docker.com
+1. *NAVIGATE* to [https://hub.docker.com](https://hub.docker.com "Docker Hub"){target=_blank}
 2. *CLICK* **Explore**
 3. *CLICK* **Official Images**
 4. *CLICK* **Programming Languages**
 5. *CLICK* **Python**
 
-![DockerHub Base Image Search](../images/dockerhub-base-image-search.gif)
+[![Docker Hub Base Image Search](../images/dockerhub-base-image-search.gif "Docker Hub Base Image Search")](../../images/dockerhub-base-image-search.gif){target=_blank}
 
 Feel free to review the available images and read the supporting documentation about the images.  This example will utilize a Python base image named **slim-buster**.
 
 !!! info
-    Here are some instructions for building a base image if you so desire: [Base Images](https://docs.docker.com/develop/develop-images/baseimages/)
+    Here are some instructions for building a base image if you so desire: [Base Images](https://docs.docker.com/develop/develop-images/baseimages/ "Base Images"){target=_blank}
 
 ## Create the Initial Dockerfile
 
-Once you have selected the desired base image you can start to build your `Dockerfile` for the project. The first line of a Dockerfile is *almost* always the [`FROM`](https://docs.docker.com/engine/reference/builder/#from) command.  The only other command that can precede  `FROM` is `ARG`.  This section keeps it simple and uses only `FROM`
+Once you have selected the desired base image you can start to build your `Dockerfile` for the project. The first line of a Dockerfile is *almost* always the [`FROM`](https://docs.docker.com/engine/reference/builder/#from "FROM"){target=_blank} command.  The only other command that can precede  `FROM` is `ARG`.  This section keeps it simple and uses only `FROM`
 
 1. *CREATE* a **new file** named **Dockerfile** in the *root* of your project directory
 2. *ADD* the following first **line**
 
 ​    `FROM python:slim-buster`
 
-![Create Dockerfile](../images/dockerfile-from.gif)
+[![Create Dockerfile](../images/dockerfile-from.gif "Create Dockerfile")](../../images/dockerfile-from.gif){target=_blank}
 
 ## Providing Meta Data
 
-Using the [`LABEL`](https://docs.docker.com/engine/reference/builder/#label){target=_blank} command we can include some information about the Dockerfile to increase supportability down the road.  The `LABEL` command allows you to define a series of **key** and **value** pairs of attributes.
+Using the [`LABEL`](https://docs.docker.com/engine/reference/builder/#label "LABEL"){target=_blank} command we can include some information about the Dockerfile to increase supportability down the road.  The `LABEL` command allows you to define a series of **key** and **value** pairs of attributes.
 
 ```dockerfile
 # Define some meta data
@@ -56,7 +56,7 @@ LABEL author="Jeff Andiorio" email="jeff.andiorio@wwt.com"
 
 There will be many occasions where you will need to add some OS level packages that rely on a package manager for installation.  In this case we are on a Debian Linux based system which uses `apt` as a package manager.
 
-In the Dockerfile you can use the [`RUN`](https://docs.docker.com/engine/reference/builder/#run) command to provide instructions to perform these package installations.  The `RUN` instruction can be used for executing commands on the target container.  This section will use the *shell* syntax.  Check the Docker documentation for more information.
+In the Dockerfile you can use the [`RUN`](https://docs.docker.com/engine/reference/builder/#run "RUN"){target=_blank} command to provide instructions to perform these package installations.  The `RUN` instruction can be used for executing commands on the target container.  This section will use the *shell* syntax.  Check the Docker documentation for more information.
 
 ```dockerfile
 # Update Debian Packages and Install Git

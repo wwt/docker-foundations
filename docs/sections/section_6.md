@@ -7,4 +7,3 @@ The goal of this walk-through was to provide you real-world, hands-on exposure t
 The source repository for this page can be accessed by clicking the [**wwt/docker-foundations**](https://github.com/wwt/docker-foundations).
 
 In the source repository there is additional information and a very detailed PowerPoint presentation you can use as a reference.
-
