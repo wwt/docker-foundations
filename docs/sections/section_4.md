@@ -1,10 +1,10 @@
 # Integrate Docker with Visual Studio Code
 
-Visual Studio Code provides integrations with Docker that make the elements of your development environment (where you write code + where you execute code) complete seemless and highly portable.
+Visual Studio Code provides integrations with Docker that make the elements of your development environment (where you write code + where you execute code) completey seemless and highly portable.
 
-Justs including the `Dockerfile` in your repository means anyone collaborating or consuming your code will have an indentical execution environment as where developed the solution.
+Just including the `Dockerfile` in your repository means anyone collaborating or consuming your code will have an indentical execution environment as where you developed the solution.
 
-**Scenario:** Integrate our Docker image into Visual Studio Code wo we can take advantage of the seemless development environment and utilize feature like the Python Debugger and Intergrated terminal.
+**Scenario:** Integrate our Docker image into Visual Studio Code so we can take advantage of the seemless development environment and utilize feature like the Python Debugger and Intergrated terminal.
 
 ## Brief Overview of VSC Integration
 
@@ -12,7 +12,7 @@ The Visual Studio Code Remote - Container extension is one of the extensions inc
 
 There are multiple ways to utilize a container as your development environment within Visual Studio Code but we will look at the most *integrated* and *automated* method.
 
-[Developing inside a Container](https://code.visualstudio.com/docs/remote/containers)
+[Developing inside a Container](https://code.visualstudio.com/docs/remote/containers "Developing inside a Container"){target=_blank}
 
 ## Create a `.devcontainer.json` Config File
 
@@ -40,7 +40,7 @@ Earlier you added some extensions to Visual Studio Code to support the build of 
 
 4. *OPEN* the **`devcontainer.json`** file and review the change
 
-   ![image-20210614132142489](../images/devcontainer.json.png)
+   [![devcontainer.json](../images/devcontainer.json.png) "devcontainer.json"](../../images/devcontainer.json.png){target=_blank}
 
 ## Open Project in Container
 
@@ -50,18 +50,20 @@ All of the pieces are now in place.  You will need to reopen your project in the
 
 2. *SELECT* **Reopen in Container**
 
-   ![Reopen in Container](../images/reopen-in-container.png)
+   [![Reopen in Container](../images/reopen-in-container.png "Reopen in Container")](../../images/reopen-in-container.png){target=_blank}
 
 3. *REVIEW*  the environment
 
-   ![Opened in Container](../images/vsc-opened-in-container.png)
+   [![Opened in Container](../images/vsc-opened-in-container.png "Opened in Container")](../../images/vsc-opened-in-container.png){target=_blank}
 
 :exclamation: Notice the bottom left corner shows **Dev Container**.  This is confirmation that you are connected to a **Remote Container** using the devcontainer integration.
 
-:exclamation: Notice the **terminal** (Open one if it isn't open already) is inside the container.  (Should show **root@**...)
+!!! attention
+    Notice the **terminal** (open one if it isn't open already) is inside the container (should show **root@**...).
 
-:exclamation: Notice a Python Interpretter has been automatically selected for you.
+!!! attention
+    Notice that a Python Interpretter has been automatically selected for you.
 
 ## What's Next
 
-The last thing for you to do is test the environment.  The next and last section will provide a very basic review of the environment.
+The last thing for you to do is test the environment.  The next and last sections will provide a very basic review of the environment.
