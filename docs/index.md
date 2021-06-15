@@ -10,16 +10,15 @@ This Hands-On walk-through is designed to provide you real-world exposure to the
 
 Here are some additional resources available:
 
-:computer: [WWT Programmability Foundations Lab — Docker Section](https://www.wwt.com/lab/programmability-foundations-lab " WWT Programmability Foundations - Version Control")
+:computer: [WWT Programmability Foundations Lab — Docker Section](https://www.wwt.com/lab/programmability-foundations-lab " WWT Programmability Foundations - Docker Section"){target=_blank}
 
 ## What You Need
 
-1. A Windows or macOS computer with [Docker Desktop](https://www.docker.com/products/docker-desktop).
-2. If you are new to Docker, here is the [Docker Desktop Installation Documentation](https://docs.docker.com/desktop/).
-3. Alternatively, you can [install Docker in a Linux Environment](https://docs.docker.com/engine/install/) and complete the walkthrough.
-4. Visual Studio Code ([download](https://code.visualstudio.com/download))
+1. A Windows or macOS computer with [Docker Desktop](https://www.docker.com/products/docker-desktop "Docker Desktop"){target=_blank}.
+2. If you are new to Docker, here is the [Docker Desktop Installation Documentation](https://docs.docker.com/desktop/ "Docker Desktop Installation Documentation"){target=_blank}.
+3. Alternatively, you can [install Docker in a Linux Environment](https://docs.docker.com/engine/install/ "install Docker in a Linux Environment"){target=_blank} and complete the walkthrough.
+4. Visual Studio Code ([download](https://code.visualstudio.com/download "Download Visual Studio Code"){target=_blank})
 
 ## What's Next
 
 The next section will guide you through getting your environment prepared for the lab.
-
