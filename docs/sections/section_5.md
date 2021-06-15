@@ -1,12 +1,12 @@
 # Visual Studio Code Development Environment Review
 
-The goal of this walk-through was to expose you to the integrations with simple examples.  The section validates the environment is ready for use.
+The goal of this walk-through was to expose you to the integrations with simple examples.  This section validates the environment is ready for use.
 
 ## Python Integration
 
 In this section you will create a simple Python script to retreive search results from iTunes.  You are looking to validate the Python functionality within the Visual Studio Code Editor.
 
-:worried: Don't worry, you don't have to know any python at this point...
+:worried: Don't worry, you don't have to know any Python at this point...
 
 1. *CREATE* a **file** named `search_itunes.py`
 2. *PASTE* the Python code below
@@ -50,7 +50,7 @@ In this section you will create a simple Python script to retreive search result
 
 4. *CLICK* the green play button
 
-   ![Run Python](../images/run-python.png)
+   [![Run Python](../images/run-python.png "Run Python")](../../images/run-python.png){target=_blank}
 
 5. *ANSWER* the prompts
 
