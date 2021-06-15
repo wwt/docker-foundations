@@ -1,26 +1,27 @@
 # Integrate Docker with Visual Studio Code
 
-Visual Studio Code provides integrations with Docker that make the elements of your development environment (where you write code + where you execute code) completey seemless and highly portable.
+Visual Studio Code provides integrations with Docker that make the elements of your development environment (where you write code + where you execute code) complete seamless and highly portable.
 
-Just including the `Dockerfile` in your repository means anyone collaborating or consuming your code will have an indentical execution environment as where you developed the solution.
+Just including the `Dockerfile` in your repository means anyone collaborating or consuming your code will have an identical execution environment as where developed the solution.
 
-**Scenario:** Integrate our Docker image into Visual Studio Code so we can take advantage of the seemless development environment and utilize feature like the Python Debugger and Intergrated terminal.
+**Scenario:** Integrate our Docker image into Visual Studio Code, so we can take advantage of the seamless development environment and utilize feature like the Python Debugger and Integrated terminal.
+
 
 ## Brief Overview of VSC Integration
 
-The Visual Studio Code Remote - Container extension is one of the extensions included with the bundle we installed earlier.  This extension allows you to use a container as your fully-integrated development environment, exposing all of the features of Visual Studio Code to you within it.
+The Visual Studio Code Remote - Container extension is one of the extensions included with the bundle we installed earlier.  This extension allows you to use a container as your fully-integrated development environment, exposing all the features of Visual Studio Code to you within it.
 
-There are multiple ways to utilize a container as your development environment within Visual Studio Code but we will look at the most *integrated* and *automated* method.
+There are multiple ways to utilize a container as your development environment within Visual Studio Code, but we will look at the most *integrated* and *automated* method.
 
 [Developing inside a Container](https://code.visualstudio.com/docs/remote/containers "Developing inside a Container"){target=_blank}
 
 ## Create a `.devcontainer.json` Config File
 
-When Visual Studio Code start it looks for a configuration file named `.devcontainer.json` located either at the project root or in a subfolder named `.devcontainer` .  The existence of this file will prompt Visual Studio Code to use the contents of that configuration file to map your development environment to a container.
+When Visual Studio Code start it looks for a configuration file named `.devcontainer.json` located either at the project root or in a subfolder named `.devcontainer`.  The existence of this file will prompt Visual Studio Code to use the contents of that configuration file to map your development environment to a container.
 
 1. *CREATE* a **file**  named `.devcontainer.json` in the root of your project
 
-2. *ADD* `json` formated key/value for the Dockerfile
+2. *ADD* `json` formatted key/value for the Dockerfile
 
    ```json
    {
@@ -44,7 +45,7 @@ Earlier you added some extensions to Visual Studio Code to support the build of 
 
 ## Open Project in Container
 
-All of the pieces are now in place.  You will need to reopen your project in the container to have your fully functional Docker container-based development environment activated.
+All the pieces are now in place.  You will need to reopen your project in the container to have your fully functional Docker container-based development environment activated.
 
 1. *CLICK* the <img src="../images/remote-connection.png" alt="image-20210614132745015" style="zoom:50%;" /> at the bottom left
 
@@ -64,6 +65,7 @@ All of the pieces are now in place.  You will need to reopen your project in the
 
 !!! attention
     Notice that a Python Interpretter has been automatically selected for you.
+
 
 ## What's Next
 
