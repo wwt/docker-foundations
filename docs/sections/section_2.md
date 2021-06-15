@@ -20,7 +20,7 @@ You can learn more about GitHub in the [GitHub Documentation](https://docs.githu
 
     [Version Control Video](https://www.wwt.com/video/introduction-to-version-control Version Control Video){target=_blank}
 
-1. *NAVIGATE* to [**GitHub**](www.github.com "GitHub"){target=_blank}
+1. *NAVIGATE* to [**GitHub**](https://www.github.com "GitHub"){target=_blank}
 
 2. *CLICK* the **New**  button next to **Repositories**
 
@@ -74,7 +74,7 @@ There are two ways to approach this step:
     !!! important
         The command above will clone down the repository creating a subfolder with the name of the repo in the folder where you ran the command.
 
-    [![Clone Project Repo](../images/clone-project-repo-manual.gif "Clone Project Repo)](../../images/clone-project-repo-manual.gif){target=_blank}
+    [![Clone Project Repo](../images/clone-project-repo-manual.gif "Clone Project Repo")](../../images/clone-project-repo-manual.gif){target=_blank}
 
 7. *OPEN* the new Folder in Visual Studio Code using **Open Folder**
 

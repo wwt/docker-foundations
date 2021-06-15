@@ -56,7 +56,8 @@ All of the pieces are now in place.  You will need to reopen your project in the
 
    [![Opened in Container](../images/vsc-opened-in-container.png "Opened in Container")](../../images/vsc-opened-in-container.png){target=_blank}
 
-:exclamation: Notice the bottom left corner shows **Dev Container**.  This is confirmation that you are connected to a **Remote Container** using the devcontainer integration.
+!!! attention
+    Notice the bottom left corner shows **Dev Container**.  This is confirmation that you are connected to a **Remote Container** using the devcontainer integration.
 
 !!! attention
     Notice the **terminal** (open one if it isn't open already) is inside the container (should show **root@**...).
