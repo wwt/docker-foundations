@@ -6,14 +6,14 @@ The Extensions Marketplace can be found by clicking the <img src="../../images/i
 
 ## Docker Extension
 
-The first extension to add is the Docker extension.  This will provide capabilities like syntax highlighting in Dockerfiles, autocompletion of instructions, and much more.  You can read more about the Extension on the Visual Studio Code Market Place page.
+The first extension to add is the Docker extension.  This will provide capabilities like syntax highlighting in Dockerfiles, auto-completion of instructions, and much more.  You can read more about the Extension on the Visual Studio Code Marketplace page.
 
 1. *OPEN* **Visual Studio Code**
 2. *CLICK* the **Extensions** <img src="../../images/image-20210610152153324.png" style="zoom:33%;" /> **Icon** on the left
 3. *ENTER* `ms-azuretools.vscode-docker` in the **Search Extensions in Marketplace** box
 4. *SELECT* **Install**
 
-[![docker extension](../images/docker-extension.png)](../../images/docker-extension.png){target=_blank}
+[![docker extension](../images/docker-extension.png "Docker Extension")](../../images/docker-extension.png){target=_blank}
 
 ## Remote Development Extension
 
@@ -30,9 +30,8 @@ This section will illustrate the additional Visual Studio Code Extension needed 
 
 The Extension details will indicate that the extension is installed and enabled as seen below.
 
-[![remote dev extension](../images/remote-development-extension.png)](../../images/remote-development-extension.png){target=_blank}
+[![remote dev extension](../images/remote-development-extension.png "Remote Development Extension")](../../images/remote-development-extension.png){target=_blank}
 
 ## What's Next
 
 Now that you have installed the required **Visual Studio Code Extensions** from the Marketplace you will create a new GitHub repository, clone that locally and open it in Visual Studio Code.
-
