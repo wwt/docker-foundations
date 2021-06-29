@@ -24,7 +24,7 @@ In this section you will create a simple Python script to retrieve search result
 
     # VALIDATE INPUT
     if media not in MEDIA:
-        print("Please type one of the valid options [{MEDIA}]")
+        print(f"Please type one of the valid options [{MEDIA}]")
         sys.exit()
 
     term = input("Enter search string:  ").lower()
