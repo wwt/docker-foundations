@@ -534,42 +534,35 @@
 <p>The goal of this walk-through was to expose you to the integrations with simple examples.  This section validates the environment is ready for use.</p>
 <h2 id="python-integration">Python Integration</h2>
 <p>In this section you will create a simple Python script to retrieve search results from iTunes.  You are looking to validate the Python functionality within the Visual Studio Code Editor.</p>
-<p><img alt="😟" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f61f.svg" title=":worried:" /> Don't worry, you don't have to know any Python at this point...</p>
+<p><img alt="😟" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f61f.svg" title=":worried:" /> Don't worry, you don't have to know any Python at this point...</p>
 <ol>
 <li><em>CREATE</em> a <strong>file</strong> named <code>search_itunes.py</code></li>
 <li>
 <p><em>PASTE</em> the Python code below</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="c1"># CONSTANTS</span>
-<span class="n">BASE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://itunes.apple.com/search?country=US&quot;</span>
-<span class="n">MEDIA</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;movie&#39;</span><span class="p">,</span> <span class="s1">&#39;music&#39;</span><span class="p">,</span> <span class="s1">&#39;podcast&#39;</span><span class="p">]</span>
-
-<span class="c1"># INPUT VARIABLES</span>
-<span class="n">media</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What type of media? [movie, music, or podcast]:  &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-
-<span class="c1"># VALIDATE INPUT</span>
-<span class="k">if</span> <span class="n">media</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">MEDIA</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Please type one of the valid options [</span><span class="si">{</span><span class="n">MEDIA</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">)</span>
-    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
-
-<span class="n">term</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter search string:  &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-
-<span class="c1"># INTERNAL VARIABLES</span>
-<span class="n">_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE_URL</span><span class="si">}</span><span class="s2">&amp;media=</span><span class="si">{</span><span class="n">media</span><span class="si">}</span><span class="s2">&amp;term=</span><span class="si">{</span><span class="n">term</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="n">_session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">session</span><span class="p">()</span>
-
-<span class="c1"># MAKE REST API CALL</span>
-<span class="n">results</span> <span class="o">=</span> <span class="n">_session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">_url</span><span class="p">)</span>
-
-<span class="c1"># EXTRACT RESULT DATA FROM RESONSE OBJECT</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;results&#39;</span><span class="p">]</span>
-
-<span class="c1"># LOOP OVER RESULTS AND PRINT</span>
-<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;trackName&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;50</span><span class="si">}{</span><span class="n">result</span><span class="p">[</span><span class="s1">&#39;releaseDate&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">&gt;50</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
+<p>```python
+import sys
+import requests</p>
+<h1 id="constants">CONSTANTS</h1>
+<p>BASE_URL = "https://itunes.apple.com/search?country=US"
+MEDIA = ['movie', 'music', 'podcast']</p>
+<h1 id="input-variables">INPUT VARIABLES</h1>
+<p>media = input("What type of media? [movie, music, or podcast]:  ").lower()</p>
+<h1 id="validate-input">VALIDATE INPUT</h1>
+<p>if media not in MEDIA:
+    print(f"Please type one of the valid options [{MEDIA}]")
+    sys.exit()</p>
+<p>term = input("Enter search string:  ").lower()</p>
+<h1 id="internal-variables">INTERNAL VARIABLES</h1>
+<p>_url = f"{BASE_URL}&amp;media={media}&amp;term={term}"
+_session = requests.session()</p>
+<h1 id="make-rest-api-call">MAKE REST API CALL</h1>
+<p>results = _session.get(_url)</p>
+<h1 id="extract-result-data-from-resonse-object">EXTRACT RESULT DATA FROM RESONSE OBJECT</h1>
+<p>data = results.json()['results']</p>
+<h1 id="loop-over-results-and-print">LOOP OVER RESULTS AND PRINT</h1>
+<p>for result in data:
+    print(f"{result['trackName']:&lt;50}{result['releaseDate']:&gt;50}")</p>
+<p>```</p>
 </li>
 <li>
 <p><em>SAVE</em> the <strong>file</strong></p>
