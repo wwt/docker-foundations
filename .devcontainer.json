@@ -1,7 +1,45 @@
+// Visual Studio Code Development Container configuration file
+// https://code.visualstudio.com/docs/remote/devcontainerjson-reference
 {
-    "dockerFile": "Dockerfile",
-    "extensions": [
-		"knisterpeter.vscode-github",
-		"github.vscode-pull-request-github"
-	]
+    // Docker build instructions
+    "name": "Docker foundations",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            // Visual Studio Code extensions
+            "extensions": [
+				"davidanson.vscode-markdownlint",
+                "github.vscode-github-actions",
+				"github.vscode-pull-request-github",
+                "ms-python.flake8",
+				"ms-python.pylint",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-azuretools.vscode-docker",
+				"redhat.vscode-yaml",
+				"streetsidesoftware.code-spell-checker"
+			],
+            // Visual Studio Code environment configuration
+            "settings": {
+                // Set the default terminal application to bash
+                "#terminal.integrated.defaultProfile.linux#": "/bin/bash",
+                // Customize YAML formatting
+                "[yaml]": {
+                    "editor.insertSpaces": true,
+                    "editor.tabSize": 2,
+                    "editor.autoIndent": "keep",
+                    "editor.quickSuggestions": {
+                        "other": true,
+                        "comments": false,
+                        "strings": true
+                    }
+                },
+                // Set Python configuration for runtime, syntax analysis, and linting
+                "python.analysis.useImportHeuristic": true,
+                "python.pythonPath": "/usr/local/bin/python3"
+            }
+        }
+    }
 }
